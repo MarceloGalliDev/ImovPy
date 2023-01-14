@@ -1,0 +1,21 @@
+<RCC>
+  <qresource prefix="icons">
+    <file>icons/menu.png</file>
+    <file>Icons/android.png</file>
+    <file>Icons/facebook.png</file>
+    <file>Icons/github.png</file>
+    <file>Icons/google.png</file>
+    <file>Icons/google+.png</file>
+    <file>Icons/instagram.png</file>
+    <file>Icons/linkedin.png</file>
+    <file>Icons/maps.png</file>
+    <file>Icons/menu.png</file>
+    <file>Icons/pinterest.png</file>
+    <file>Icons/skype.png</file>
+    <file>Icons/snapchat.png</file>
+    <file>Icons/twitter.png</file>
+    <file>Icons/vimeo.png</file>
+    <file>Icons/whatsapp.png</file>
+    <file>Icons/youtube.png</file>
+  </qresource>
+</RCC>

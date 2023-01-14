@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1202</width>
-    <height>826</height>
+    <width>1146</width>
+    <height>774</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -203,7 +203,7 @@ QPushButton:hover {
 </string>
                    </property>
                    <property name="text">
-                    <string>Consultar</string>
+                    <string>Consulta</string>
                    </property>
                   </widget>
                  </item>
@@ -337,7 +337,7 @@ QPushButton:hover {
          </property>
          <layout class="QVBoxLayout" name="verticalLayout">
           <item>
-           <widget class="QFrame" name="frame">
+           <widget class="QFrame" name="frame_header">
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -358,7 +358,7 @@ QPushButton:hover {
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout_5">
              <item>
-              <widget class="QPushButton" name="pushButton">
+              <widget class="QPushButton" name="btn_toggle_button">
                <property name="minimumSize">
                 <size>
                  <width>50</width>
@@ -375,13 +375,13 @@ QPushButton:hover {
                 <string/>
                </property>
                <property name="icon">
-                <iconset>
-                 <normaloff>Icons/menu.png</normaloff>Icons/menu.png</iconset>
+                <iconset resource="icons.qrc">
+                 <normaloff>:/icons/icons/menu.png</normaloff>:/icons/icons/menu.png</iconset>
                </property>
               </widget>
              </item>
              <item>
-              <widget class="QLabel" name="label">
+              <widget class="QLabel" name="frame_title">
                <property name="minimumSize">
                 <size>
                  <width>0</width>
@@ -419,10 +419,62 @@ QPushButton:hover {
             <property name="frameShadow">
              <enum>QFrame::Raised</enum>
             </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_6">
+             <item>
+              <widget class="QTabWidget" name="tabWidget">
+               <property name="styleSheet">
+                <string notr="true">QTabBar::tab{
+	background-color: rgb(87, 65, 0);
+}
+
+QTabBar::tab:selected{
+	background-color: rgb(120, 99, 36);
+}
+
+</string>
+               </property>
+               <property name="currentIndex">
+                <number>0</number>
+               </property>
+               <widget class="QWidget" name="tab_Home">
+                <attribute name="title">
+                 <string>Home</string>
+                </attribute>
+                <layout class="QHBoxLayout" name="horizontalLayout_7">
+                 <item>
+                  <widget class="QLabel" name="label">
+                   <property name="styleSheet">
+                    <string notr="true">image: url(:/icons/Icons/android.png);</string>
+                   </property>
+                   <property name="text">
+                    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="tab_Cadastro">
+                <attribute name="title">
+                 <string>Cadastro</string>
+                </attribute>
+               </widget>
+               <widget class="QWidget" name="tab_Consultar">
+                <attribute name="title">
+                 <string>Consulta</string>
+                </attribute>
+               </widget>
+               <widget class="QWidget" name="tab_Contato">
+                <attribute name="title">
+                 <string>Contato</string>
+                </attribute>
+               </widget>
+              </widget>
+             </item>
+            </layout>
            </widget>
           </item>
           <item>
-           <widget class="QFrame" name="frame_3">
+           <widget class="QFrame" name="frame_footer">
             <property name="minimumSize">
              <size>
               <width>0</width>
@@ -443,7 +495,7 @@ QPushButton:hover {
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_4">
              <item>
-              <widget class="QLabel" name="label_2">
+              <widget class="QLabel" name="label_footer">
                <property name="minimumSize">
                 <size>
                  <width>0</width>
@@ -482,6 +534,8 @@ QPushButton:hover {
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
  <connections/>
 </ui>
