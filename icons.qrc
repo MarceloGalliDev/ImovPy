@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="icons">
+    <file>Icons/logo2.png</file>
+    <file>Icons/logo.png</file>
     <file>icons/menu.png</file>
     <file>Icons/android.png</file>
     <file>Icons/facebook.png</file>
