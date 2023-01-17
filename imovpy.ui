@@ -55,7 +55,7 @@ border-radius: 5px;</string>
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: rgba(52,39,0,100);</string>
+          <string notr="true">background-color: rgb(52,39,0);</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
@@ -66,6 +66,9 @@ border-radius: 5px;</string>
          <layout class="QVBoxLayout" name="verticalLayout_2">
           <item>
            <widget class="QFrame" name="menu_aside_main">
+            <property name="styleSheet">
+             <string notr="true">background-color: #55430C;</string>
+            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
@@ -339,7 +342,7 @@ QPushButton:hover {
           </size>
          </property>
          <property name="styleSheet">
-          <string notr="true">background-color: rgba(52,39,0,100);</string>
+          <string notr="true">background-color: rgb(52,39,0);</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::StyledPanel</enum>
@@ -362,6 +365,9 @@ QPushButton:hover {
               <height>50</height>
              </size>
             </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: #55430C;</string>
+            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
@@ -382,6 +388,17 @@ QPushButton:hover {
                  <width>50</width>
                  <height>30</height>
                 </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+	background-color: #786324;
+	border-radius: 5px
+}
+
+QPushButton:hover {
+	background-color: #c49300;
+	border-radius: 5px
+}</string>
                </property>
                <property name="text">
                 <string/>
@@ -425,6 +442,9 @@ QPushButton:hover {
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: #55430C;</string>
+            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
@@ -450,7 +470,10 @@ QPushButton:hover {
                 <cursorShape>ArrowCursor</cursorShape>
                </property>
                <property name="styleSheet">
-                <string notr="true">QTabBar::tab{
+                <string notr="true">QWidget{
+	background-color: #342700;
+}
+QTabBar::tab{
 	background-color: rgb(87, 65, 0);
 }
 
@@ -1325,6 +1348,9 @@ QPushButton:hover {
                  <width>0</width>
                  <height>0</height>
                 </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: #55430C;</string>
                </property>
                <property name="text">
                 <string>Created by Galli, Marcelo L. Ⓡ</string>
