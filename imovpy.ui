@@ -30,7 +30,7 @@
        </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: rgba(52,39,0,100);
+       <string notr="true">background-color: #1A1300;
 border-radius: 5px;</string>
       </property>
       <property name="frameShape">
@@ -44,13 +44,13 @@ border-radius: 5px;</string>
         <widget class="QFrame" name="frame_aside">
          <property name="minimumSize">
           <size>
-           <width>200</width>
+           <width>0</width>
            <height>600</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>200</width>
+           <width>0</width>
            <height>600</height>
           </size>
          </property>
@@ -64,6 +64,9 @@ border-radius: 5px;</string>
           <enum>QFrame::Raised</enum>
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_2">
+          <property name="spacing">
+           <number>-1</number>
+          </property>
           <item>
            <widget class="QFrame" name="menu_aside_main">
             <property name="styleSheet">
@@ -108,8 +111,8 @@ QToolBox::tab:hover{
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>152</width>
-                  <height>484</height>
+                  <width>80</width>
+                  <height>469</height>
                  </rect>
                 </property>
                 <attribute name="label">
@@ -273,8 +276,8 @@ QPushButton:hover {
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>152</width>
-                  <height>484</height>
+                  <width>130</width>
+                  <height>469</height>
                  </rect>
                 </property>
                 <attribute name="label">
@@ -1329,6 +1332,21 @@ QPushButton:hover {
              <enum>QFrame::Raised</enum>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_4">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
              <item>
               <widget class="QLabel" name="label_footer">
                <property name="minimumSize">
@@ -1357,6 +1375,9 @@ QPushButton:hover {
                </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
+               </property>
+               <property name="margin">
+                <number>0</number>
                </property>
               </widget>
              </item>

@@ -35,7 +35,7 @@ class Ui_MainWindow(object):
         self.frame_page_content.setObjectName(u"frame_page_content")
         self.frame_page_content.setMinimumSize(QSize(1000, 630))
         self.frame_page_content.setMaximumSize(QSize(1110, 630))
-        self.frame_page_content.setStyleSheet(u"background-color: rgba(52,39,0,100);\n"
+        self.frame_page_content.setStyleSheet(u"background-color: #1A1300;\n"
 "border-radius: 5px;")
         self.frame_page_content.setFrameShape(QFrame.StyledPanel)
         self.frame_page_content.setFrameShadow(QFrame.Raised)
@@ -43,12 +43,15 @@ class Ui_MainWindow(object):
         self.horizontalLayout_2.setObjectName(u"horizontalLayout_2")
         self.frame_aside = QFrame(self.frame_page_content)
         self.frame_aside.setObjectName(u"frame_aside")
-        self.frame_aside.setMinimumSize(QSize(200, 600))
-        self.frame_aside.setMaximumSize(QSize(200, 600))
+        self.frame_aside.setMinimumSize(QSize(0, 600))
+        self.frame_aside.setMaximumSize(QSize(0, 600))
         self.frame_aside.setStyleSheet(u"background-color: rgb(52,39,0);")
         self.frame_aside.setFrameShape(QFrame.StyledPanel)
         self.frame_aside.setFrameShadow(QFrame.Raised)
         self.verticalLayout_2 = QVBoxLayout(self.frame_aside)
+#ifndef Q_OS_MAC
+        self.verticalLayout_2.setSpacing(-1)
+#endif
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.menu_aside_main = QFrame(self.frame_aside)
         self.menu_aside_main.setObjectName(u"menu_aside_main")
@@ -76,7 +79,7 @@ class Ui_MainWindow(object):
 "}")
         self.page_1_menu = QWidget()
         self.page_1_menu.setObjectName(u"page_1_menu")
-        self.page_1_menu.setGeometry(QRect(0, 0, 152, 484))
+        self.page_1_menu.setGeometry(QRect(0, 0, 80, 469))
         self.verticalLayout_3 = QVBoxLayout(self.page_1_menu)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
         self.btn_home = QPushButton(self.page_1_menu)
@@ -159,7 +162,7 @@ class Ui_MainWindow(object):
         self.menu_aside_content.addItem(self.page_1_menu, u"Menu")
         self.page_2_menu = QWidget()
         self.page_2_menu.setObjectName(u"page_2_menu")
-        self.page_2_menu.setGeometry(QRect(0, 0, 152, 484))
+        self.page_2_menu.setGeometry(QRect(0, 0, 130, 469))
         self.horizontalLayout_4 = QHBoxLayout(self.page_2_menu)
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
         self.label_page_2 = QLabel(self.page_2_menu)
@@ -580,7 +583,9 @@ class Ui_MainWindow(object):
         self.frame_footer.setFrameShape(QFrame.StyledPanel)
         self.frame_footer.setFrameShadow(QFrame.Raised)
         self.verticalLayout_4 = QVBoxLayout(self.frame_footer)
+        self.verticalLayout_4.setSpacing(0)
         self.verticalLayout_4.setObjectName(u"verticalLayout_4")
+        self.verticalLayout_4.setContentsMargins(0, 0, 0, 0)
         self.label_footer = QLabel(self.frame_footer)
         self.label_footer.setObjectName(u"label_footer")
         self.label_footer.setMinimumSize(QSize(0, 30))
@@ -588,6 +593,7 @@ class Ui_MainWindow(object):
         self.label_footer.setSizeIncrement(QSize(0, 0))
         self.label_footer.setStyleSheet(u"background-color: #55430C;")
         self.label_footer.setAlignment(Qt.AlignCenter)
+        self.label_footer.setMargin(0)
 
         self.verticalLayout_4.addWidget(self.label_footer)
 
