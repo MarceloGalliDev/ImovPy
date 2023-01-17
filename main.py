@@ -3,7 +3,7 @@ from PySide6.QtWidgets import (QApplication, QMainWindow, QMessageBox, QTableWid
 from PySide6.QtGui import QIcon
 from ui_imovpy import Ui_MainWindow
 import sys
-from ui_functions import consulta_cnpj
+from ui_functions import cnpj_consult
 from database import Database
 import pandas as pd
 import sqlite3
@@ -36,6 +36,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.animation.setEasingCurve(QEasingCurve.InOutQuart)
         self.animation.start()
     ######################
+    
+    ### API CONSULT ###
+    def api_consult(self):
+        if self.comboBox_persona.setText("Jurídica"):
+            
+    ###################
 
 ### CONNECTION ###    
 if __name__ == "__main__":

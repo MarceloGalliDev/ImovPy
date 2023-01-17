@@ -1,7 +1,7 @@
 import requests
 import json
 
-def consulta_cnpj(cnpj):
+def cnpj_consult(cnpj):
     url = f"https://www.receitaws.com.br/v1/cnpj/{cnpj}"
     querystring = {"token":"XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX","cnpj":"06990590000123","plugin":"RF"}
     
@@ -11,4 +11,4 @@ def consulta_cnpj(cnpj):
 
     return resp['nome'], resp['logradouro'], resp['numero'], resp['complemento'], resp['bairro'], resp['municipio'], resp['uf'], resp['cep'], resp['telefone'], resp['email']
     
-consulta_cnpj('48281510000100')
+cnpj_consult('48281510000100')
