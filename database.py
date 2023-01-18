@@ -56,7 +56,7 @@ class Database:
     def select_all_immobile(self):
         try:
             cursor = self.connection.cursor()
-            cursor.execute("SELECT * FROM ORDER BY ID")
+            cursor.execute("SELECT * FROM EMPRESAS ORDER BY ID")
             empresas = cursor.fetchall()
             return empresas
         except:

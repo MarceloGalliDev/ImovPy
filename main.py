@@ -107,7 +107,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             msg.setWindowTitle("Cadastro")
             msg.setText("Cadastro realizado com sucesso!")
             msg.exec()           
-            db.close_connection()
+            db.disconnect()
             
             self.label_id.clear()
             self.comboBox_persona.clear(),
@@ -136,7 +136,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             msg.setWindowTitle("Erro")
             msg.setText("Erro ao cadastrar, verifique as informações!")
             msg.exec()
-            db.close_connection()
+            db.disconnect()
             return
     ###############
 
@@ -176,7 +176,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             for column, data, in enumerate(text):
                 self.table_immobile.setItem(row, column, QTableWidgetItem(str(data)))
         
-        db.close_connection()
+        db.disconnect()
     ############## 
     
 ### CONNECTION ###    
