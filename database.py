@@ -49,9 +49,9 @@ class Database:
         try:
             cursor.execute(f"""INSERT INTO Empresas{input_table} VALUES({qtde})""", fullDataSet)
             self.connection.commit()
-            return "OK!"
+            return "OK"
         except:
-            return "ERROR!"
+            return "ERROR"
     
     def select_all_immobile(self):
         try:

@@ -304,8 +304,8 @@ QPushButton:hover {
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>172</width>
-                  <height>484</height>
+                  <width>130</width>
+                  <height>469</height>
                  </rect>
                 </property>
                 <attribute name="label">
@@ -522,9 +522,9 @@ QTabBar::tab:selected{
                 <enum>QTabWidget::Rounded</enum>
                </property>
                <property name="currentIndex">
-                <number>0</number>
+                <number>1</number>
                </property>
-               <widget class="QWidget" name="tab_Home">
+               <widget class="QWidget" name="page_home">
                 <attribute name="title">
                  <string>Home</string>
                 </attribute>
@@ -541,7 +541,7 @@ QTabBar::tab:selected{
                  </item>
                 </layout>
                </widget>
-               <widget class="QWidget" name="tab_Cadastro">
+               <widget class="QWidget" name="page_cadastro">
                 <property name="styleSheet">
                  <string notr="true">QComboBox{
 	background-color: #786324;
@@ -582,7 +582,7 @@ QTextEdit{
                   <widget class="QComboBox" name="comboBox_tipo">
                    <property name="minimumSize">
                     <size>
-                     <width>0</width>
+                     <width>200</width>
                      <height>25</height>
                     </size>
                    </property>
@@ -612,25 +612,6 @@ QTextEdit{
                      <string>Venda/Locação</string>
                     </property>
                    </item>
-                  </widget>
-                 </item>
-                 <item row="0" column="0">
-                  <widget class="QLineEdit" name="lineEdit_id">
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>25</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string/>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                   <property name="placeholderText">
-                    <string>ID</string>
-                   </property>
                   </widget>
                  </item>
                  <item row="1" column="6" colspan="2">
@@ -831,7 +812,11 @@ QTextEdit{
                   </widget>
                  </item>
                  <item row="4" column="2" rowspan="5" colspan="8">
-                  <widget class="QTextEdit" name="textEdit_descricao"/>
+                  <widget class="QTextEdit" name="textEdit_descricao">
+                   <property name="placeholderText">
+                    <string>DESCRIÇÃO</string>
+                   </property>
+                  </widget>
                  </item>
                  <item row="0" column="6" colspan="4">
                   <widget class="QLineEdit" name="lineEdit_nome">
@@ -1147,9 +1132,22 @@ QPushButton:hover {
                    </layout>
                   </widget>
                  </item>
+                 <item row="0" column="0">
+                  <widget class="QLabel" name="label_id">
+                   <property name="styleSheet">
+                    <string notr="true">QLabel {
+	background-color: #786324;
+	border-radius: 5px
+}</string>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
                 </layout>
                </widget>
-               <widget class="QWidget" name="tab_Consultar">
+               <widget class="QWidget" name="page_consultar">
                 <attribute name="title">
                  <string>Consulta</string>
                 </attribute>
@@ -1185,7 +1183,7 @@ QPushButton:hover {
                      <number>0</number>
                     </property>
                     <item>
-                     <widget class="QTableWidget" name="tableWidget">
+                     <widget class="QTableWidget" name="table_immobile">
                       <property name="styleSheet">
                        <string notr="true">QTableView {
 	background-color:rgb(255,255,255);
@@ -1439,7 +1437,7 @@ QPushButton:hover {
                  </item>
                 </layout>
                </widget>
-               <widget class="QWidget" name="tab_Contato">
+               <widget class="QWidget" name="page_contato">
                 <attribute name="title">
                  <string>Contato</string>
                 </attribute>

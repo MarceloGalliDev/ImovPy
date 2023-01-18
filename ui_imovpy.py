@@ -174,7 +174,7 @@ class Ui_MainWindow(object):
         self.menu_aside_content.addItem(self.page_1_menu, u"Menu")
         self.page_2_menu = QWidget()
         self.page_2_menu.setObjectName(u"page_2_menu")
-        self.page_2_menu.setGeometry(QRect(0, 0, 172, 484))
+        self.page_2_menu.setGeometry(QRect(0, 0, 130, 469))
         self.horizontalLayout_4 = QHBoxLayout(self.page_2_menu)
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
         self.label_page_2 = QLabel(self.page_2_menu)
@@ -283,20 +283,20 @@ class Ui_MainWindow(object):
 "")
         self.tabWidget.setTabPosition(QTabWidget.North)
         self.tabWidget.setTabShape(QTabWidget.Rounded)
-        self.tab_Home = QWidget()
-        self.tab_Home.setObjectName(u"tab_Home")
-        self.horizontalLayout_7 = QHBoxLayout(self.tab_Home)
+        self.page_home = QWidget()
+        self.page_home.setObjectName(u"page_home")
+        self.horizontalLayout_7 = QHBoxLayout(self.page_home)
         self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
-        self.label_image = QLabel(self.tab_Home)
+        self.label_image = QLabel(self.page_home)
         self.label_image.setObjectName(u"label_image")
         self.label_image.setStyleSheet(u"image: url(:/icons/Icons/logo2.png);")
 
         self.horizontalLayout_7.addWidget(self.label_image)
 
-        self.tabWidget.addTab(self.tab_Home, "")
-        self.tab_Cadastro = QWidget()
-        self.tab_Cadastro.setObjectName(u"tab_Cadastro")
-        self.tab_Cadastro.setStyleSheet(u"QComboBox{\n"
+        self.tabWidget.addTab(self.page_home, "")
+        self.page_cadastro = QWidget()
+        self.page_cadastro.setObjectName(u"page_cadastro")
+        self.page_cadastro.setStyleSheet(u"QComboBox{\n"
 "	background-color: #786324;\n"
 "}\n"
 "\n"
@@ -307,41 +307,34 @@ class Ui_MainWindow(object):
 "QTextEdit{\n"
 "	background-color: #786324;\n"
 "}")
-        self.gridLayout_2 = QGridLayout(self.tab_Cadastro)
+        self.gridLayout_2 = QGridLayout(self.page_cadastro)
         self.gridLayout_2.setObjectName(u"gridLayout_2")
-        self.lineEdit_email = QLineEdit(self.tab_Cadastro)
+        self.lineEdit_email = QLineEdit(self.page_cadastro)
         self.lineEdit_email.setObjectName(u"lineEdit_email")
         self.lineEdit_email.setMinimumSize(QSize(0, 25))
         self.lineEdit_email.setAlignment(Qt.AlignCenter)
 
         self.gridLayout_2.addWidget(self.lineEdit_email, 3, 7, 1, 3)
 
-        self.comboBox_tipo = QComboBox(self.tab_Cadastro)
+        self.comboBox_tipo = QComboBox(self.page_cadastro)
         self.comboBox_tipo.addItem("")
         self.comboBox_tipo.addItem("")
         self.comboBox_tipo.addItem("")
         self.comboBox_tipo.addItem("")
         self.comboBox_tipo.setObjectName(u"comboBox_tipo")
-        self.comboBox_tipo.setMinimumSize(QSize(0, 25))
+        self.comboBox_tipo.setMinimumSize(QSize(200, 25))
         self.comboBox_tipo.setMaximumSize(QSize(300, 16777215))
 
         self.gridLayout_2.addWidget(self.comboBox_tipo, 4, 0, 1, 2)
 
-        self.lineEdit_id = QLineEdit(self.tab_Cadastro)
-        self.lineEdit_id.setObjectName(u"lineEdit_id")
-        self.lineEdit_id.setMinimumSize(QSize(0, 25))
-        self.lineEdit_id.setAlignment(Qt.AlignCenter)
-
-        self.gridLayout_2.addWidget(self.lineEdit_id, 0, 0, 1, 1)
-
-        self.lineEdit_numero = QLineEdit(self.tab_Cadastro)
+        self.lineEdit_numero = QLineEdit(self.page_cadastro)
         self.lineEdit_numero.setObjectName(u"lineEdit_numero")
         self.lineEdit_numero.setMinimumSize(QSize(0, 25))
         self.lineEdit_numero.setAlignment(Qt.AlignCenter)
 
         self.gridLayout_2.addWidget(self.lineEdit_numero, 1, 6, 1, 2)
 
-        self.lineEdit_cep = QLineEdit(self.tab_Cadastro)
+        self.lineEdit_cep = QLineEdit(self.page_cadastro)
         self.lineEdit_cep.setObjectName(u"lineEdit_cep")
         self.lineEdit_cep.setMinimumSize(QSize(0, 25))
         self.lineEdit_cep.setMaximumSize(QSize(300, 16777215))
@@ -349,49 +342,49 @@ class Ui_MainWindow(object):
 
         self.gridLayout_2.addWidget(self.lineEdit_cep, 3, 0, 1, 2)
 
-        self.lineEdit_municipio = QLineEdit(self.tab_Cadastro)
+        self.lineEdit_municipio = QLineEdit(self.page_cadastro)
         self.lineEdit_municipio.setObjectName(u"lineEdit_municipio")
         self.lineEdit_municipio.setMinimumSize(QSize(300, 25))
         self.lineEdit_municipio.setAlignment(Qt.AlignCenter)
 
         self.gridLayout_2.addWidget(self.lineEdit_municipio, 2, 5, 1, 4)
 
-        self.lineEdit_celular = QLineEdit(self.tab_Cadastro)
+        self.lineEdit_celular = QLineEdit(self.page_cadastro)
         self.lineEdit_celular.setObjectName(u"lineEdit_celular")
         self.lineEdit_celular.setMinimumSize(QSize(0, 25))
         self.lineEdit_celular.setAlignment(Qt.AlignCenter)
 
         self.gridLayout_2.addWidget(self.lineEdit_celular, 3, 4, 1, 3)
 
-        self.lineEdit_bairro = QLineEdit(self.tab_Cadastro)
+        self.lineEdit_bairro = QLineEdit(self.page_cadastro)
         self.lineEdit_bairro.setObjectName(u"lineEdit_bairro")
         self.lineEdit_bairro.setMinimumSize(QSize(0, 25))
         self.lineEdit_bairro.setAlignment(Qt.AlignCenter)
 
         self.gridLayout_2.addWidget(self.lineEdit_bairro, 2, 0, 1, 5)
 
-        self.lineEdit_cpf_cnpj = QLineEdit(self.tab_Cadastro)
+        self.lineEdit_cpf_cnpj = QLineEdit(self.page_cadastro)
         self.lineEdit_cpf_cnpj.setObjectName(u"lineEdit_cpf_cnpj")
         self.lineEdit_cpf_cnpj.setMinimumSize(QSize(200, 25))
         self.lineEdit_cpf_cnpj.setAlignment(Qt.AlignCenter)
 
         self.gridLayout_2.addWidget(self.lineEdit_cpf_cnpj, 0, 3, 1, 3)
 
-        self.lineEdit_logradouro = QLineEdit(self.tab_Cadastro)
+        self.lineEdit_logradouro = QLineEdit(self.page_cadastro)
         self.lineEdit_logradouro.setObjectName(u"lineEdit_logradouro")
         self.lineEdit_logradouro.setMinimumSize(QSize(0, 25))
         self.lineEdit_logradouro.setAlignment(Qt.AlignCenter)
 
         self.gridLayout_2.addWidget(self.lineEdit_logradouro, 1, 0, 1, 6)
 
-        self.lineEdit_telefone = QLineEdit(self.tab_Cadastro)
+        self.lineEdit_telefone = QLineEdit(self.page_cadastro)
         self.lineEdit_telefone.setObjectName(u"lineEdit_telefone")
         self.lineEdit_telefone.setMinimumSize(QSize(197, 25))
         self.lineEdit_telefone.setAlignment(Qt.AlignCenter)
 
         self.gridLayout_2.addWidget(self.lineEdit_telefone, 3, 2, 1, 2)
 
-        self.comboBox_persona = QComboBox(self.tab_Cadastro)
+        self.comboBox_persona = QComboBox(self.page_cadastro)
         self.comboBox_persona.addItem("")
         self.comboBox_persona.addItem("")
         self.comboBox_persona.setObjectName(u"comboBox_persona")
@@ -399,19 +392,19 @@ class Ui_MainWindow(object):
 
         self.gridLayout_2.addWidget(self.comboBox_persona, 0, 1, 1, 2)
 
-        self.lineEdit_uf = QLineEdit(self.tab_Cadastro)
+        self.lineEdit_uf = QLineEdit(self.page_cadastro)
         self.lineEdit_uf.setObjectName(u"lineEdit_uf")
         self.lineEdit_uf.setMinimumSize(QSize(0, 25))
         self.lineEdit_uf.setAlignment(Qt.AlignCenter)
 
         self.gridLayout_2.addWidget(self.lineEdit_uf, 2, 9, 1, 1)
 
-        self.textEdit_descricao = QTextEdit(self.tab_Cadastro)
+        self.textEdit_descricao = QTextEdit(self.page_cadastro)
         self.textEdit_descricao.setObjectName(u"textEdit_descricao")
 
         self.gridLayout_2.addWidget(self.textEdit_descricao, 4, 2, 5, 8)
 
-        self.lineEdit_nome = QLineEdit(self.tab_Cadastro)
+        self.lineEdit_nome = QLineEdit(self.page_cadastro)
         self.lineEdit_nome.setObjectName(u"lineEdit_nome")
         sizePolicy.setHeightForWidth(self.lineEdit_nome.sizePolicy().hasHeightForWidth())
         self.lineEdit_nome.setSizePolicy(sizePolicy)
@@ -420,14 +413,14 @@ class Ui_MainWindow(object):
 
         self.gridLayout_2.addWidget(self.lineEdit_nome, 0, 6, 1, 4)
 
-        self.lineEdit_complemento = QLineEdit(self.tab_Cadastro)
+        self.lineEdit_complemento = QLineEdit(self.page_cadastro)
         self.lineEdit_complemento.setObjectName(u"lineEdit_complemento")
         self.lineEdit_complemento.setMinimumSize(QSize(0, 25))
         self.lineEdit_complemento.setAlignment(Qt.AlignCenter)
 
         self.gridLayout_2.addWidget(self.lineEdit_complemento, 1, 8, 1, 2)
 
-        self.lineEdit_valor = QLineEdit(self.tab_Cadastro)
+        self.lineEdit_valor = QLineEdit(self.page_cadastro)
         self.lineEdit_valor.setObjectName(u"lineEdit_valor")
         self.lineEdit_valor.setMinimumSize(QSize(0, 25))
         self.lineEdit_valor.setMaximumSize(QSize(300, 16777215))
@@ -435,7 +428,7 @@ class Ui_MainWindow(object):
 
         self.gridLayout_2.addWidget(self.lineEdit_valor, 8, 0, 1, 2)
 
-        self.comboBox_status = QComboBox(self.tab_Cadastro)
+        self.comboBox_status = QComboBox(self.page_cadastro)
         self.comboBox_status.addItem("")
         self.comboBox_status.addItem("")
         self.comboBox_status.addItem("")
@@ -447,7 +440,7 @@ class Ui_MainWindow(object):
 
         self.gridLayout_2.addWidget(self.comboBox_status, 5, 0, 1, 2)
 
-        self.comboBox_caracteristica = QComboBox(self.tab_Cadastro)
+        self.comboBox_caracteristica = QComboBox(self.page_cadastro)
         self.comboBox_caracteristica.addItem("")
         self.comboBox_caracteristica.addItem("")
         self.comboBox_caracteristica.addItem("")
@@ -459,7 +452,7 @@ class Ui_MainWindow(object):
 
         self.gridLayout_2.addWidget(self.comboBox_caracteristica, 6, 0, 1, 2)
 
-        self.comboBox_opcao = QComboBox(self.tab_Cadastro)
+        self.comboBox_opcao = QComboBox(self.page_cadastro)
         self.comboBox_opcao.addItem("")
         self.comboBox_opcao.addItem("")
         self.comboBox_opcao.setObjectName(u"comboBox_opcao")
@@ -468,7 +461,7 @@ class Ui_MainWindow(object):
 
         self.gridLayout_2.addWidget(self.comboBox_opcao, 7, 0, 1, 2)
 
-        self.frame_btn_cadastro = QFrame(self.tab_Cadastro)
+        self.frame_btn_cadastro = QFrame(self.page_cadastro)
         self.frame_btn_cadastro.setObjectName(u"frame_btn_cadastro")
         self.frame_btn_cadastro.setMaximumSize(QSize(16777215, 50))
         self.frame_btn_cadastro.setFrameShape(QFrame.StyledPanel)
@@ -526,12 +519,21 @@ class Ui_MainWindow(object):
 
         self.gridLayout_2.addWidget(self.frame_btn_cadastro, 9, 0, 1, 10)
 
-        self.tabWidget.addTab(self.tab_Cadastro, "")
-        self.tab_Consultar = QWidget()
-        self.tab_Consultar.setObjectName(u"tab_Consultar")
-        self.horizontalLayout_8 = QHBoxLayout(self.tab_Consultar)
+        self.label_id = QLabel(self.page_cadastro)
+        self.label_id.setObjectName(u"label_id")
+        self.label_id.setStyleSheet(u"QLabel {\n"
+"	background-color: #786324;\n"
+"	border-radius: 5px\n"
+"}")
+
+        self.gridLayout_2.addWidget(self.label_id, 0, 0, 1, 1)
+
+        self.tabWidget.addTab(self.page_cadastro, "")
+        self.page_consultar = QWidget()
+        self.page_consultar.setObjectName(u"page_consultar")
+        self.horizontalLayout_8 = QHBoxLayout(self.page_consultar)
         self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
-        self.frame_main_consulta = QFrame(self.tab_Consultar)
+        self.frame_main_consulta = QFrame(self.page_consultar)
         self.frame_main_consulta.setObjectName(u"frame_main_consulta")
         self.frame_main_consulta.setMaximumSize(QSize(16777215, 16777215))
         self.frame_main_consulta.setFrameShape(QFrame.StyledPanel)
@@ -540,64 +542,64 @@ class Ui_MainWindow(object):
         self.verticalLayout_6.setSpacing(0)
         self.verticalLayout_6.setObjectName(u"verticalLayout_6")
         self.verticalLayout_6.setContentsMargins(0, 0, 0, 0)
-        self.tableWidget = QTableWidget(self.frame_main_consulta)
-        if (self.tableWidget.columnCount() < 20):
-            self.tableWidget.setColumnCount(20)
+        self.table_immobile = QTableWidget(self.frame_main_consulta)
+        if (self.table_immobile.columnCount() < 20):
+            self.table_immobile.setColumnCount(20)
         __qtablewidgetitem = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
+        self.table_immobile.setHorizontalHeaderItem(0, __qtablewidgetitem)
         __qtablewidgetitem1 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem1)
+        self.table_immobile.setHorizontalHeaderItem(1, __qtablewidgetitem1)
         __qtablewidgetitem2 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem2)
+        self.table_immobile.setHorizontalHeaderItem(2, __qtablewidgetitem2)
         __qtablewidgetitem3 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem3)
+        self.table_immobile.setHorizontalHeaderItem(3, __qtablewidgetitem3)
         __qtablewidgetitem4 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(4, __qtablewidgetitem4)
+        self.table_immobile.setHorizontalHeaderItem(4, __qtablewidgetitem4)
         __qtablewidgetitem5 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(5, __qtablewidgetitem5)
+        self.table_immobile.setHorizontalHeaderItem(5, __qtablewidgetitem5)
         __qtablewidgetitem6 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(6, __qtablewidgetitem6)
+        self.table_immobile.setHorizontalHeaderItem(6, __qtablewidgetitem6)
         __qtablewidgetitem7 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(7, __qtablewidgetitem7)
+        self.table_immobile.setHorizontalHeaderItem(7, __qtablewidgetitem7)
         __qtablewidgetitem8 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(8, __qtablewidgetitem8)
+        self.table_immobile.setHorizontalHeaderItem(8, __qtablewidgetitem8)
         __qtablewidgetitem9 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(9, __qtablewidgetitem9)
+        self.table_immobile.setHorizontalHeaderItem(9, __qtablewidgetitem9)
         __qtablewidgetitem10 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(10, __qtablewidgetitem10)
+        self.table_immobile.setHorizontalHeaderItem(10, __qtablewidgetitem10)
         __qtablewidgetitem11 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(11, __qtablewidgetitem11)
+        self.table_immobile.setHorizontalHeaderItem(11, __qtablewidgetitem11)
         __qtablewidgetitem12 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(12, __qtablewidgetitem12)
+        self.table_immobile.setHorizontalHeaderItem(12, __qtablewidgetitem12)
         __qtablewidgetitem13 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(13, __qtablewidgetitem13)
+        self.table_immobile.setHorizontalHeaderItem(13, __qtablewidgetitem13)
         __qtablewidgetitem14 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(14, __qtablewidgetitem14)
+        self.table_immobile.setHorizontalHeaderItem(14, __qtablewidgetitem14)
         __qtablewidgetitem15 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(15, __qtablewidgetitem15)
+        self.table_immobile.setHorizontalHeaderItem(15, __qtablewidgetitem15)
         __qtablewidgetitem16 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(16, __qtablewidgetitem16)
+        self.table_immobile.setHorizontalHeaderItem(16, __qtablewidgetitem16)
         __qtablewidgetitem17 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(17, __qtablewidgetitem17)
+        self.table_immobile.setHorizontalHeaderItem(17, __qtablewidgetitem17)
         __qtablewidgetitem18 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(18, __qtablewidgetitem18)
+        self.table_immobile.setHorizontalHeaderItem(18, __qtablewidgetitem18)
         __qtablewidgetitem19 = QTableWidgetItem()
-        self.tableWidget.setHorizontalHeaderItem(19, __qtablewidgetitem19)
-        self.tableWidget.setObjectName(u"tableWidget")
-        self.tableWidget.setStyleSheet(u"QTableView {\n"
+        self.table_immobile.setHorizontalHeaderItem(19, __qtablewidgetitem19)
+        self.table_immobile.setObjectName(u"table_immobile")
+        self.table_immobile.setStyleSheet(u"QTableView {\n"
 "	background-color:rgb(255,255,255);\n"
 "	color: rgb(0,0,0);\n"
 "}\n"
 "")
-        self.tableWidget.setSizeAdjustPolicy(QAbstractScrollArea.AdjustIgnored)
-        self.tableWidget.setAlternatingRowColors(True)
+        self.table_immobile.setSizeAdjustPolicy(QAbstractScrollArea.AdjustIgnored)
+        self.table_immobile.setAlternatingRowColors(True)
 
-        self.verticalLayout_6.addWidget(self.tableWidget)
+        self.verticalLayout_6.addWidget(self.table_immobile)
 
 
         self.horizontalLayout_8.addWidget(self.frame_main_consulta)
 
-        self.frame_consulta_menu = QFrame(self.tab_Consultar)
+        self.frame_consulta_menu = QFrame(self.page_consultar)
         self.frame_consulta_menu.setObjectName(u"frame_consulta_menu")
         self.frame_consulta_menu.setMinimumSize(QSize(130, 0))
         self.frame_consulta_menu.setMaximumSize(QSize(130, 16777215))
@@ -664,19 +666,19 @@ class Ui_MainWindow(object):
 
         self.horizontalLayout_8.addWidget(self.frame_consulta_menu)
 
-        self.tabWidget.addTab(self.tab_Consultar, "")
-        self.tab_Contato = QWidget()
-        self.tab_Contato.setObjectName(u"tab_Contato")
-        self.horizontalLayout_9 = QHBoxLayout(self.tab_Contato)
+        self.tabWidget.addTab(self.page_consultar, "")
+        self.page_contato = QWidget()
+        self.page_contato.setObjectName(u"page_contato")
+        self.horizontalLayout_9 = QHBoxLayout(self.page_contato)
         self.horizontalLayout_9.setObjectName(u"horizontalLayout_9")
-        self.label_contato = QLabel(self.tab_Contato)
+        self.label_contato = QLabel(self.page_contato)
         self.label_contato.setObjectName(u"label_contato")
         self.label_contato.setStyleSheet(u"color: rgb(255, 255, 255);")
         self.label_contato.setAlignment(Qt.AlignCenter)
 
         self.horizontalLayout_9.addWidget(self.label_contato)
 
-        self.tabWidget.addTab(self.tab_Contato, "")
+        self.tabWidget.addTab(self.page_contato, "")
 
         self.horizontalLayout_6.addWidget(self.tabWidget)
 
@@ -718,7 +720,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.menu_aside_content.setCurrentIndex(0)
-        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -736,7 +738,7 @@ class Ui_MainWindow(object):
         self.btn_toggle_button.setText("")
         self.frame_title.setText(QCoreApplication.translate("MainWindow", u"ImovPy - Cadastro de im\u00f3veis", None))
         self.label_image.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><br/></p></body></html>", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_Home), QCoreApplication.translate("MainWindow", u"Home", None))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.page_home), QCoreApplication.translate("MainWindow", u"Home", None))
         self.lineEdit_email.setText("")
         self.lineEdit_email.setPlaceholderText(QCoreApplication.translate("MainWindow", u"E-MAIL", None))
         self.comboBox_tipo.setItemText(0, QCoreApplication.translate("MainWindow", u"Selecione", None))
@@ -744,8 +746,6 @@ class Ui_MainWindow(object):
         self.comboBox_tipo.setItemText(2, QCoreApplication.translate("MainWindow", u"Loca\u00e7\u00e3o", None))
         self.comboBox_tipo.setItemText(3, QCoreApplication.translate("MainWindow", u"Venda/Loca\u00e7\u00e3o", None))
 
-        self.lineEdit_id.setText("")
-        self.lineEdit_id.setPlaceholderText(QCoreApplication.translate("MainWindow", u"ID", None))
         self.lineEdit_numero.setText("")
         self.lineEdit_numero.setPlaceholderText(QCoreApplication.translate("MainWindow", u"N\u00daMERO", None))
         self.lineEdit_cep.setText("")
@@ -767,6 +767,7 @@ class Ui_MainWindow(object):
 
         self.lineEdit_uf.setText("")
         self.lineEdit_uf.setPlaceholderText(QCoreApplication.translate("MainWindow", u"UF", None))
+        self.textEdit_descricao.setPlaceholderText(QCoreApplication.translate("MainWindow", u"DESCRI\u00c7\u00c3O", None))
         self.lineEdit_nome.setText("")
         self.lineEdit_nome.setPlaceholderText(QCoreApplication.translate("MainWindow", u"NOME/RAZ\u00c3O SOCIAL", None))
         self.lineEdit_complemento.setText("")
@@ -790,53 +791,54 @@ class Ui_MainWindow(object):
 
         self.btn_cadastrar.setText(QCoreApplication.translate("MainWindow", u"Cadastrar", None))
         self.btn_limpar.setText(QCoreApplication.translate("MainWindow", u"Limpar", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_Cadastro), QCoreApplication.translate("MainWindow", u"Cadastro", None))
-        ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
+        self.label_id.setText("")
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.page_cadastro), QCoreApplication.translate("MainWindow", u"Cadastro", None))
+        ___qtablewidgetitem = self.table_immobile.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"ID", None));
-        ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
+        ___qtablewidgetitem1 = self.table_immobile.horizontalHeaderItem(1)
         ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"PERSONA", None));
-        ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
+        ___qtablewidgetitem2 = self.table_immobile.horizontalHeaderItem(2)
         ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"CPF/CNPJ", None));
-        ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
+        ___qtablewidgetitem3 = self.table_immobile.horizontalHeaderItem(3)
         ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"NOME/RAZ\u00c3O", None));
-        ___qtablewidgetitem4 = self.tableWidget.horizontalHeaderItem(4)
+        ___qtablewidgetitem4 = self.table_immobile.horizontalHeaderItem(4)
         ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"ENDERE\u00c7O", None));
-        ___qtablewidgetitem5 = self.tableWidget.horizontalHeaderItem(5)
+        ___qtablewidgetitem5 = self.table_immobile.horizontalHeaderItem(5)
         ___qtablewidgetitem5.setText(QCoreApplication.translate("MainWindow", u"N\u00daMERO", None));
-        ___qtablewidgetitem6 = self.tableWidget.horizontalHeaderItem(6)
+        ___qtablewidgetitem6 = self.table_immobile.horizontalHeaderItem(6)
         ___qtablewidgetitem6.setText(QCoreApplication.translate("MainWindow", u"COMPLEMENTO", None));
-        ___qtablewidgetitem7 = self.tableWidget.horizontalHeaderItem(7)
+        ___qtablewidgetitem7 = self.table_immobile.horizontalHeaderItem(7)
         ___qtablewidgetitem7.setText(QCoreApplication.translate("MainWindow", u"BAIRRO", None));
-        ___qtablewidgetitem8 = self.tableWidget.horizontalHeaderItem(8)
+        ___qtablewidgetitem8 = self.table_immobile.horizontalHeaderItem(8)
         ___qtablewidgetitem8.setText(QCoreApplication.translate("MainWindow", u"CIDADE", None));
-        ___qtablewidgetitem9 = self.tableWidget.horizontalHeaderItem(9)
+        ___qtablewidgetitem9 = self.table_immobile.horizontalHeaderItem(9)
         ___qtablewidgetitem9.setText(QCoreApplication.translate("MainWindow", u"UF", None));
-        ___qtablewidgetitem10 = self.tableWidget.horizontalHeaderItem(10)
+        ___qtablewidgetitem10 = self.table_immobile.horizontalHeaderItem(10)
         ___qtablewidgetitem10.setText(QCoreApplication.translate("MainWindow", u"CEP", None));
-        ___qtablewidgetitem11 = self.tableWidget.horizontalHeaderItem(11)
+        ___qtablewidgetitem11 = self.table_immobile.horizontalHeaderItem(11)
         ___qtablewidgetitem11.setText(QCoreApplication.translate("MainWindow", u"TELEFONE", None));
-        ___qtablewidgetitem12 = self.tableWidget.horizontalHeaderItem(12)
+        ___qtablewidgetitem12 = self.table_immobile.horizontalHeaderItem(12)
         ___qtablewidgetitem12.setText(QCoreApplication.translate("MainWindow", u"CELULAR", None));
-        ___qtablewidgetitem13 = self.tableWidget.horizontalHeaderItem(13)
+        ___qtablewidgetitem13 = self.table_immobile.horizontalHeaderItem(13)
         ___qtablewidgetitem13.setText(QCoreApplication.translate("MainWindow", u"EMAIL", None));
-        ___qtablewidgetitem14 = self.tableWidget.horizontalHeaderItem(14)
+        ___qtablewidgetitem14 = self.table_immobile.horizontalHeaderItem(14)
         ___qtablewidgetitem14.setText(QCoreApplication.translate("MainWindow", u"TIPO", None));
-        ___qtablewidgetitem15 = self.tableWidget.horizontalHeaderItem(15)
+        ___qtablewidgetitem15 = self.table_immobile.horizontalHeaderItem(15)
         ___qtablewidgetitem15.setText(QCoreApplication.translate("MainWindow", u"STATUS", None));
-        ___qtablewidgetitem16 = self.tableWidget.horizontalHeaderItem(16)
+        ___qtablewidgetitem16 = self.table_immobile.horizontalHeaderItem(16)
         ___qtablewidgetitem16.setText(QCoreApplication.translate("MainWindow", u"CARACTER\u00cdSTICAS", None));
-        ___qtablewidgetitem17 = self.tableWidget.horizontalHeaderItem(17)
+        ___qtablewidgetitem17 = self.table_immobile.horizontalHeaderItem(17)
         ___qtablewidgetitem17.setText(QCoreApplication.translate("MainWindow", u"VISIBILIDADE", None));
-        ___qtablewidgetitem18 = self.tableWidget.horizontalHeaderItem(18)
+        ___qtablewidgetitem18 = self.table_immobile.horizontalHeaderItem(18)
         ___qtablewidgetitem18.setText(QCoreApplication.translate("MainWindow", u"VALOR", None));
-        ___qtablewidgetitem19 = self.tableWidget.horizontalHeaderItem(19)
+        ___qtablewidgetitem19 = self.table_immobile.horizontalHeaderItem(19)
         ___qtablewidgetitem19.setText(QCoreApplication.translate("MainWindow", u"DESCRI\u00c7\u00c3O", None));
         self.btn_gerar_excel.setText(QCoreApplication.translate("MainWindow", u"Gerar Excel", None))
         self.btn_alterar.setText(QCoreApplication.translate("MainWindow", u"Alterar", None))
         self.btn_excluir.setText(QCoreApplication.translate("MainWindow", u"Excluir", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_Consultar), QCoreApplication.translate("MainWindow", u"Consulta", None))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.page_consultar), QCoreApplication.translate("MainWindow", u"Consulta", None))
         self.label_contato.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><img src=\":/icons/Icons/whatsapp.png\"/><span style=\" font-size:24pt; vertical-align:super;\">(44)98862-0946</span></p><p align=\"center\"><img src=\":/icons/Icons/linkedin.png\"/><span style=\" font-size:24pt; vertical-align:super;\">https://www.linkedin.com/in/marcelo-l-galli-488671101/</span></p><p align=\"center\"><img src=\":/icons/Icons/github.png\"/><span style=\" font-size:24pt; vertical-align:super;\">https://github.com/MarceloGalliDev</span></p><p align=\"center\"><img src=\":/icons/Icons/instagram.png\"/><span style=\" font-size:24pt; vertical-align:super;\">https://www.instagram.com/marcelogalli/</span></p><p align=\"center\"><img src=\":/icons/Icons/google+.png\"/><span style=\" font-size:24pt; vertical-align:super;\">marcelolemesgalli2@gmail.com</span></p></body></html>", None))
-        self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_Contato), QCoreApplication.translate("MainWindow", u"Contato", None))
+        self.tabWidget.setTabText(self.tabWidget.indexOf(self.page_contato), QCoreApplication.translate("MainWindow", u"Contato", None))
         self.label_footer.setText(QCoreApplication.translate("MainWindow", u"Created by Galli, Marcelo L. \u24c7", None))
     # retranslateUi
 

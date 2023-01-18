@@ -19,7 +19,16 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         ### BUTTONS FUNCTIONS ###
         self.btn_toggle_button.clicked.connect(self.toggleMenu)
         self.lineEdit_cpf_cnpj.editingFinished.connect(self.api_consult)
+        self.btn_cadastrar.clicked.connect(self.register_fields)
+        self.btn_limpar.clicked.connect(self.clear_fields)
         #########################
+        
+        ### SYSTEM PAGES ###
+        self.btn_home.clicked.connect(lambda: self.tabWidget_content.setCurrentWidget(self.page_home))
+        self.btn_cadastro.clicked.connect(lambda: self.tabWidget_content.setCurrentWidget(self.page_cadastro))
+        self.btn_consultar.clicked.connect(lambda: self.tabWidget_content.setCurrentWidget(self.page_consultar))
+        self.btn_contato.clicked.connect(lambda: self.tabWidget_content.setCurrentWidget(self.page_contato))
+        ##################### 
     
     ### MENU ANIMATION ###
     def toggleMenu(self):
@@ -61,8 +70,115 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             msg.exec()  
     ###################
     
-    ### 
+    ### REGISTER ###
+    def register_fields(self):
+        db = Database()
+        db.connect()
+        
+        fullDataSet = (
+            self.comboBox_persona.text(),
+            self.lineEdit_cpf_cnpj.text(),
+            self.lineEdit_nome.text(),
+            self.lineEdit_logradouro.text(),
+            self.lineEdit_numero.text(),
+            self.lineEdit_complemento.text(),
+            self.lineEdit_bairro.text(),
+            self.lineEdit_municipio.text(),
+            self.lineEdit_uf.text(),
+            self.lineEdit_cep.text(),
+            self.lineEdit_telefone.text().strip(),
+            self.lineEdit_celular.text().strip(),
+            self.lineEdit_email.text(),
+            self.comboBox_tipo.text(),
+            self.comboBox_status.text(),
+            self.comboBox_caracteristica.text(),
+            self.comboBox_opcao.text(),
+            self.lineEdit_valor.text(),
+            self.textEdit_descricao.text()
+        )
+        
+        resp = db.register_immobile(fullDataSet)
+        
+        self.immobile_search()
+        
+        if resp == "OK":
+            msg = QMessageBox()
+            msg.setIcon(QMessageBox.Information)
+            msg.setWindowTitle("Cadastro")
+            msg.setText("Cadastro realizado com sucesso!")
+            msg.exec()           
+            db.close_connection()
+            
+            self.label_id.clear()
+            self.comboBox_persona.clear(),
+            self.lineEdit_cpf_cnpj.clear(),
+            self.lineEdit_nome.clear(),
+            self.lineEdit_logradouro.clear(),
+            self.lineEdit_numero.clear(),
+            self.lineEdit_complemento.clear(),
+            self.lineEdit_bairro.clear(),
+            self.lineEdit_municipio.clear(),
+            self.lineEdit_uf.clear(),
+            self.lineEdit_cep.clear(),
+            self.lineEdit_telefone.clear(),
+            self.lineEdit_celular.clear(),
+            self.lineEdit_email.clear(),
+            self.comboBox_tipo.clear(),
+            self.comboBox_status.clear(),
+            self.comboBox_caracteristica.clear(),
+            self.comboBox_opcao.clear(),
+            self.lineEdit_valor.clear(),
+            self.textEdit_descricao.clear() 
+            return         
+        else:
+            msg = QMessageBox()
+            msg.setIcon(QMessageBox.Critical)
+            msg.setWindowTitle("Erro")
+            msg.setText("Erro ao cadastrar, verifique as informações!")
+            msg.exec()
+            db.close_connection()
+            return
+    ###############
 
+    ### CLEAR FIELDS ###
+    def clear_fields(self):
+            self.comboBox_persona.clear(),
+            self.lineEdit_cpf_cnpj.clear(),
+            self.lineEdit_nome.clear(),
+            self.lineEdit_logradouro.clear(),
+            self.lineEdit_numero.clear(),
+            self.lineEdit_complemento.clear(),
+            self.lineEdit_bairro.clear(),
+            self.lineEdit_municipio.clear(),
+            self.lineEdit_uf.clear(),
+            self.lineEdit_cep.clear(),
+            self.lineEdit_telefone.clear(),
+            self.lineEdit_celular.clear(),
+            self.lineEdit_email.clear(),
+            self.comboBox_tipo.clear(),
+            self.comboBox_status.clear(),
+            self.comboBox_caracteristica.clear(),
+            self.comboBox_opcao.clear(),
+            self.lineEdit_valor.clear(),
+            self.textEdit_descricao.clear() 
+    ####################
+    
+    ### SEARCH ###
+    def immobile_search(self):
+        db = Database()
+        db.connect()
+        result = db.select_all_immobile()
+              
+        self.table_immobile.clearContents()
+        self.table_immobile.setRowCount(len(result))
+        
+        for row, text in enumerate(result):
+            for column, data, in enumerate(text):
+                self.table_immobile.setItem(row, column, QTableWidgetItem(str(data)))
+        
+        db.close_connection()
+    ############## 
+    
 ### CONNECTION ###    
 if __name__ == "__main__":
     db = Database()
