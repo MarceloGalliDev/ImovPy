@@ -76,7 +76,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         db.connect()
         
         fullDataSet = (
-            self.comboBox_persona.text(),
+            self.comboBox_persona.currentText(),
             self.lineEdit_cpf_cnpj.text(),
             self.lineEdit_nome.text(),
             self.lineEdit_logradouro.text(),
@@ -89,12 +89,12 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.lineEdit_telefone.text().strip(),
             self.lineEdit_celular.text().strip(),
             self.lineEdit_email.text(),
-            self.comboBox_tipo.text(),
-            self.comboBox_status.text(),
-            self.comboBox_caracteristica.text(),
-            self.comboBox_opcao.text(),
+            self.comboBox_tipo.currentText(),
+            self.comboBox_status.currentText(),
+            self.comboBox_caracteristica.currentText(),
+            self.comboBox_opcao.currentText(),
             self.lineEdit_valor.text(),
-            self.textEdit_descricao.text()
+            self.textEdit_descricao.toPlainText(),
         )
         
         resp = db.register_immobile(fullDataSet)
