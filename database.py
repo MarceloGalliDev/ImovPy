@@ -20,7 +20,7 @@ class Database:
                 ID INTERGER PRIMARY KEY NOT NULL UNIQUE,
                 PERSONA TEXT,
                 CNPJ_CPF TEXT,
-                NOME_RAZAO_SOCIAL TEXT,
+                NOME TEXT,
                 ENDERECO TEXT,
                 NUMERO TEXT,
                 COMPLEMENTO TEXT,
@@ -41,7 +41,7 @@ class Database:
         """)
     
     def register_immobile(self, fullDataSet):
-        input_table = ('PERSONA', 'CNPJ_CPF', 'NOME_RAZAO_SOCIAL', 'ENDERECO', 'NUMERO', 'COMPLEMENTO', 'BAIRRO', 'CIDADE', 'UF', 'CEP', 'TELEFONE', 'CELULAR', 'EMAIL', 'TIPO', 'STATUS', 'CARACTERISTICAS', 'VISIBILIDADE', 'VALOR', 'DESCRICAO')
+        input_table = ('PERSONA', 'CNPJ_CPF', 'NOME', 'ENDERECO', 'NUMERO', 'COMPLEMENTO', 'BAIRRO', 'CIDADE', 'UF', 'CEP', 'TELEFONE', 'CELULAR', 'EMAIL', 'TIPO', 'STATUS', 'CARACTERISTICAS', 'VISIBILIDADE', 'VALOR', 'DESCRICAO')
         
         qtde = ("?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?")
         cursor = self.connection.cursor()
@@ -77,7 +77,7 @@ class Database:
             ID = '{fullDataSet[0]}',
             PERSONA = '{fullDataSet[1]},
             CNPJ_CPF = '{fullDataSet[2]},
-            NOME_RAZAO_SOCIAL = '{fullDataSet[3]},
+            NOME = '{fullDataSet[3]},
             ENDERECO = '{fullDataSet[4]},
             NUMERO = '{fullDataSet[5]},
             COMPLEMENTO = '{fullDataSet[6]},

@@ -110,7 +110,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             db.disconnect()
             
             self.label_id.clear()
-            self.comboBox_persona.clear(),
             self.lineEdit_cpf_cnpj.clear(),
             self.lineEdit_nome.clear(),
             self.lineEdit_logradouro.clear(),
@@ -123,10 +122,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.lineEdit_telefone.clear(),
             self.lineEdit_celular.clear(),
             self.lineEdit_email.clear(),
-            self.comboBox_tipo.clear(),
-            self.comboBox_status.clear(),
-            self.comboBox_caracteristica.clear(),
-            self.comboBox_opcao.clear(),
             self.lineEdit_valor.clear(),
             self.textEdit_descricao.clear() 
             return         
@@ -142,7 +137,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     ### CLEAR FIELDS ###
     def clear_fields(self):
-            self.comboBox_persona.clear(),
             self.lineEdit_cpf_cnpj.clear(),
             self.lineEdit_nome.clear(),
             self.lineEdit_logradouro.clear(),
@@ -155,10 +149,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.lineEdit_telefone.clear(),
             self.lineEdit_celular.clear(),
             self.lineEdit_email.clear(),
-            self.comboBox_tipo.clear(),
-            self.comboBox_status.clear(),
-            self.comboBox_caracteristica.clear(),
-            self.comboBox_opcao.clear(),
             self.lineEdit_valor.clear(),
             self.textEdit_descricao.clear() 
     ####################
