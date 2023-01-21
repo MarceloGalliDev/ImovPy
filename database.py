@@ -73,28 +73,27 @@ class Database:
     
     def update_immobile(self, fullDataSet):
         cursor = self.connection.cursor()
-        cursor.execute(f"""UPDATE Empresas set
+        cursor.execute(f""" UPDATE Empresas set
             ID = '{fullDataSet[0]}',
-            PERSONA = '{fullDataSet[1]},
-            CNPJ_CPF = '{fullDataSet[2]},
-            NOME = '{fullDataSet[3]},
-            ENDERECO = '{fullDataSet[4]},
-            NUMERO = '{fullDataSet[5]},
-            COMPLEMENTO = '{fullDataSet[6]},
-            BAIRRO = '{fullDataSet[7]},
-            CIDADE = '{fullDataSet[8]},
-            UF = '{fullDataSet[9]},
-            CEP = '{fullDataSet[10]},
-            TELEFONE = '{fullDataSet[11]},
-            CELULAR = '{fullDataSet[12]},
-            EMAIL = '{fullDataSet[13]},
-            TIPO = '{fullDataSet[14]},
-            STATUS = '{fullDataSet[15]},
-            CARACTERISTICA = '{fullDataSet[16]},
-            VISIBILIDADE = '{fullDataSet[17]},
-            VALOR = '{fullDataSet[18]},
-            DESCRICAO = '{fullDataSet[19]},
-            WHERE ID = '{fullDataSet[0]},                
-        """)
+            PERSONA = '{fullDataSet[1]}',
+            CNPJ_CPF = '{fullDataSet[2]}',
+            NOME = '{fullDataSet[3]}',
+            ENDERECO = '{fullDataSet[4]}',
+            NUMERO = '{fullDataSet[5]}',
+            COMPLEMENTO = '{fullDataSet[6]}',
+            BAIRRO = '{fullDataSet[7]}',
+            CIDADE = '{fullDataSet[8]}',
+            UF = '{fullDataSet[9]}',
+            CEP = '{fullDataSet[10]}',
+            TELEFONE = '{fullDataSet[11]}',
+            CELULAR = '{fullDataSet[12]}',
+            EMAIL = '{fullDataSet[13]}',
+            TIPO = '{fullDataSet[14]}',
+            STATUS = '{fullDataSet[15]}',
+            CARACTERISTICA = '{fullDataSet[16]}',
+            VISIBILIDADE = '{fullDataSet[17]}',
+            VALOR = '{fullDataSet[18]}',
+            DESCRICAO = '{fullDataSet[19]}'
+            WHERE ID = '{fullDataSet[0]}' """)
         
         self.connection.commit()

@@ -21,6 +21,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.lineEdit_cpf_cnpj.editingFinished.connect(self.api_consult)
         self.btn_cadastrar.clicked.connect(self.register_fields)
         self.btn_limpar.clicked.connect(self.clear_fields)
+        self.btn_gerar_excel.clicked.connect(self.create_excel)
+        self.btn_alterar.clicked.connect(self.update_immobile)
+        self.btn_excluir.clicked.connect(self.delete_row)
         #########################
         
         ### SYSTEM PAGES ########
@@ -97,7 +100,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.comboBox_caracteristica.currentText(),
             self.comboBox_opcao.currentText(),
             self.lineEdit_valor.text(),
-            self.lineEdit_descricao.text(),
+            self.lineEdit_descricao.text()
         )
         
         resp = db.register_immobile(fullDataSet)
@@ -213,7 +216,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         resp = msg.exec()
         
         if resp == QMessageBox.Yes:
-            cnpj = self.tb_company.selectionModel().currentIndex().siblingAtColumn(0).data()
+            id = self.table_immobile.selectionModel().currentIndex().siblingAtColumn(0).data()
             result = db.delete_immobile(id)
             self.immobile_search()
             
@@ -223,9 +226,23 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             msg.setText(result)
             msg.exec()
             
-            db.close_connection()
+            db.disconnect()
         
-        db.close_connection() 
+        db.disconnect() 
+    #############################
+    
+    ### CREATE EXCEL ############
+    def create_excel(self):
+        cnx = sqlite3.connect("system.db")
+        
+        empresas = pd.read_sql_query("""SELECT * FROM Empresas""", cnx) 
+        empresas.to_excel("Empresas.xlsx", sheet_name="empresas", index=False)
+        
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Information)
+        msg.setWindowTitle("Exccel")
+        msg.setText("Relatório excel gerado com sucesso!")
+        msg.exec()                  
     #############################
     
 ### CONNECTION ##################    
