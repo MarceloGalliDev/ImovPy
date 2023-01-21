@@ -174,7 +174,7 @@ class Ui_MainWindow(object):
         self.menu_aside_content.addItem(self.page_1_menu, u"Menu")
         self.page_2_menu = QWidget()
         self.page_2_menu.setObjectName(u"page_2_menu")
-        self.page_2_menu.setGeometry(QRect(0, 0, 130, 469))
+        self.page_2_menu.setGeometry(QRect(0, 0, 130, 206))
         self.horizontalLayout_4 = QHBoxLayout(self.page_2_menu)
         self.horizontalLayout_4.setObjectName(u"horizontalLayout_4")
         self.label_page_2 = QLabel(self.page_2_menu)
