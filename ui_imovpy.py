@@ -19,7 +19,7 @@ from PySide6.QtWidgets import (QAbstractScrollArea, QApplication, QComboBox, QFr
     QGridLayout, QHBoxLayout, QHeaderView, QLabel,
     QLineEdit, QMainWindow, QPushButton, QSizePolicy,
     QSpacerItem, QTabWidget, QTableWidget, QTableWidgetItem,
-    QTextEdit, QToolBox, QVBoxLayout, QWidget)
+    QToolBox, QVBoxLayout, QWidget)
 import icons_rc
 
 class Ui_MainWindow(object):
@@ -309,116 +309,13 @@ class Ui_MainWindow(object):
 "}")
         self.gridLayout_2 = QGridLayout(self.page_cadastro)
         self.gridLayout_2.setObjectName(u"gridLayout_2")
-        self.lineEdit_email = QLineEdit(self.page_cadastro)
-        self.lineEdit_email.setObjectName(u"lineEdit_email")
-        self.lineEdit_email.setMinimumSize(QSize(0, 25))
-        self.lineEdit_email.setAlignment(Qt.AlignCenter)
+        self.lineEdit_id = QLineEdit(self.page_cadastro)
+        self.lineEdit_id.setObjectName(u"lineEdit_id")
+        sizePolicy.setHeightForWidth(self.lineEdit_id.sizePolicy().hasHeightForWidth())
+        self.lineEdit_id.setSizePolicy(sizePolicy)
+        self.lineEdit_id.setAlignment(Qt.AlignCenter)
 
-        self.gridLayout_2.addWidget(self.lineEdit_email, 3, 7, 1, 3)
-
-        self.comboBox_tipo = QComboBox(self.page_cadastro)
-        self.comboBox_tipo.addItem("")
-        self.comboBox_tipo.addItem("")
-        self.comboBox_tipo.addItem("")
-        self.comboBox_tipo.addItem("")
-        self.comboBox_tipo.setObjectName(u"comboBox_tipo")
-        self.comboBox_tipo.setMinimumSize(QSize(200, 25))
-        self.comboBox_tipo.setMaximumSize(QSize(300, 16777215))
-
-        self.gridLayout_2.addWidget(self.comboBox_tipo, 4, 0, 1, 2)
-
-        self.lineEdit_numero = QLineEdit(self.page_cadastro)
-        self.lineEdit_numero.setObjectName(u"lineEdit_numero")
-        self.lineEdit_numero.setMinimumSize(QSize(0, 25))
-        self.lineEdit_numero.setAlignment(Qt.AlignCenter)
-
-        self.gridLayout_2.addWidget(self.lineEdit_numero, 1, 6, 1, 2)
-
-        self.lineEdit_cep = QLineEdit(self.page_cadastro)
-        self.lineEdit_cep.setObjectName(u"lineEdit_cep")
-        self.lineEdit_cep.setMinimumSize(QSize(0, 25))
-        self.lineEdit_cep.setMaximumSize(QSize(300, 16777215))
-        self.lineEdit_cep.setAlignment(Qt.AlignCenter)
-
-        self.gridLayout_2.addWidget(self.lineEdit_cep, 3, 0, 1, 2)
-
-        self.lineEdit_municipio = QLineEdit(self.page_cadastro)
-        self.lineEdit_municipio.setObjectName(u"lineEdit_municipio")
-        self.lineEdit_municipio.setMinimumSize(QSize(300, 25))
-        self.lineEdit_municipio.setAlignment(Qt.AlignCenter)
-
-        self.gridLayout_2.addWidget(self.lineEdit_municipio, 2, 5, 1, 4)
-
-        self.lineEdit_celular = QLineEdit(self.page_cadastro)
-        self.lineEdit_celular.setObjectName(u"lineEdit_celular")
-        self.lineEdit_celular.setMinimumSize(QSize(0, 25))
-        self.lineEdit_celular.setAlignment(Qt.AlignCenter)
-
-        self.gridLayout_2.addWidget(self.lineEdit_celular, 3, 4, 1, 3)
-
-        self.lineEdit_bairro = QLineEdit(self.page_cadastro)
-        self.lineEdit_bairro.setObjectName(u"lineEdit_bairro")
-        self.lineEdit_bairro.setMinimumSize(QSize(0, 25))
-        self.lineEdit_bairro.setAlignment(Qt.AlignCenter)
-
-        self.gridLayout_2.addWidget(self.lineEdit_bairro, 2, 0, 1, 5)
-
-        self.lineEdit_cpf_cnpj = QLineEdit(self.page_cadastro)
-        self.lineEdit_cpf_cnpj.setObjectName(u"lineEdit_cpf_cnpj")
-        self.lineEdit_cpf_cnpj.setMinimumSize(QSize(200, 25))
-        self.lineEdit_cpf_cnpj.setAlignment(Qt.AlignCenter)
-
-        self.gridLayout_2.addWidget(self.lineEdit_cpf_cnpj, 0, 3, 1, 3)
-
-        self.lineEdit_logradouro = QLineEdit(self.page_cadastro)
-        self.lineEdit_logradouro.setObjectName(u"lineEdit_logradouro")
-        self.lineEdit_logradouro.setMinimumSize(QSize(0, 25))
-        self.lineEdit_logradouro.setAlignment(Qt.AlignCenter)
-
-        self.gridLayout_2.addWidget(self.lineEdit_logradouro, 1, 0, 1, 6)
-
-        self.lineEdit_telefone = QLineEdit(self.page_cadastro)
-        self.lineEdit_telefone.setObjectName(u"lineEdit_telefone")
-        self.lineEdit_telefone.setMinimumSize(QSize(197, 25))
-        self.lineEdit_telefone.setAlignment(Qt.AlignCenter)
-
-        self.gridLayout_2.addWidget(self.lineEdit_telefone, 3, 2, 1, 2)
-
-        self.comboBox_persona = QComboBox(self.page_cadastro)
-        self.comboBox_persona.addItem("")
-        self.comboBox_persona.addItem("")
-        self.comboBox_persona.setObjectName(u"comboBox_persona")
-        self.comboBox_persona.setMinimumSize(QSize(140, 25))
-
-        self.gridLayout_2.addWidget(self.comboBox_persona, 0, 1, 1, 2)
-
-        self.lineEdit_uf = QLineEdit(self.page_cadastro)
-        self.lineEdit_uf.setObjectName(u"lineEdit_uf")
-        self.lineEdit_uf.setMinimumSize(QSize(0, 25))
-        self.lineEdit_uf.setAlignment(Qt.AlignCenter)
-
-        self.gridLayout_2.addWidget(self.lineEdit_uf, 2, 9, 1, 1)
-
-        self.textEdit_descricao = QTextEdit(self.page_cadastro)
-        self.textEdit_descricao.setObjectName(u"textEdit_descricao")
-
-        self.gridLayout_2.addWidget(self.textEdit_descricao, 4, 2, 5, 8)
-
-        self.lineEdit_nome = QLineEdit(self.page_cadastro)
-        self.lineEdit_nome.setObjectName(u"lineEdit_nome")
-        sizePolicy.setHeightForWidth(self.lineEdit_nome.sizePolicy().hasHeightForWidth())
-        self.lineEdit_nome.setSizePolicy(sizePolicy)
-        self.lineEdit_nome.setMinimumSize(QSize(0, 25))
-        self.lineEdit_nome.setAlignment(Qt.AlignCenter)
-
-        self.gridLayout_2.addWidget(self.lineEdit_nome, 0, 6, 1, 4)
-
-        self.lineEdit_complemento = QLineEdit(self.page_cadastro)
-        self.lineEdit_complemento.setObjectName(u"lineEdit_complemento")
-        self.lineEdit_complemento.setMinimumSize(QSize(0, 25))
-        self.lineEdit_complemento.setAlignment(Qt.AlignCenter)
-
-        self.gridLayout_2.addWidget(self.lineEdit_complemento, 1, 8, 1, 2)
+        self.gridLayout_2.addWidget(self.lineEdit_id, 0, 0, 1, 1)
 
         self.lineEdit_valor = QLineEdit(self.page_cadastro)
         self.lineEdit_valor.setObjectName(u"lineEdit_valor")
@@ -427,39 +324,6 @@ class Ui_MainWindow(object):
         self.lineEdit_valor.setAlignment(Qt.AlignCenter)
 
         self.gridLayout_2.addWidget(self.lineEdit_valor, 8, 0, 1, 2)
-
-        self.comboBox_status = QComboBox(self.page_cadastro)
-        self.comboBox_status.addItem("")
-        self.comboBox_status.addItem("")
-        self.comboBox_status.addItem("")
-        self.comboBox_status.addItem("")
-        self.comboBox_status.addItem("")
-        self.comboBox_status.setObjectName(u"comboBox_status")
-        self.comboBox_status.setMinimumSize(QSize(0, 25))
-        self.comboBox_status.setMaximumSize(QSize(300, 16777215))
-
-        self.gridLayout_2.addWidget(self.comboBox_status, 5, 0, 1, 2)
-
-        self.comboBox_caracteristica = QComboBox(self.page_cadastro)
-        self.comboBox_caracteristica.addItem("")
-        self.comboBox_caracteristica.addItem("")
-        self.comboBox_caracteristica.addItem("")
-        self.comboBox_caracteristica.addItem("")
-        self.comboBox_caracteristica.addItem("")
-        self.comboBox_caracteristica.setObjectName(u"comboBox_caracteristica")
-        self.comboBox_caracteristica.setMinimumSize(QSize(0, 25))
-        self.comboBox_caracteristica.setMaximumSize(QSize(300, 16777215))
-
-        self.gridLayout_2.addWidget(self.comboBox_caracteristica, 6, 0, 1, 2)
-
-        self.comboBox_opcao = QComboBox(self.page_cadastro)
-        self.comboBox_opcao.addItem("")
-        self.comboBox_opcao.addItem("")
-        self.comboBox_opcao.setObjectName(u"comboBox_opcao")
-        self.comboBox_opcao.setMinimumSize(QSize(0, 25))
-        self.comboBox_opcao.setMaximumSize(QSize(300, 16777215))
-
-        self.gridLayout_2.addWidget(self.comboBox_opcao, 7, 0, 1, 2)
 
         self.frame_btn_cadastro = QFrame(self.page_cadastro)
         self.frame_btn_cadastro.setObjectName(u"frame_btn_cadastro")
@@ -519,14 +383,152 @@ class Ui_MainWindow(object):
 
         self.gridLayout_2.addWidget(self.frame_btn_cadastro, 9, 0, 1, 10)
 
-        self.label_id = QLabel(self.page_cadastro)
-        self.label_id.setObjectName(u"label_id")
-        self.label_id.setStyleSheet(u"QLabel {\n"
-"	background-color: #786324;\n"
-"	border-radius: 5px\n"
-"}")
+        self.comboBox_opcao = QComboBox(self.page_cadastro)
+        self.comboBox_opcao.addItem("")
+        self.comboBox_opcao.addItem("")
+        self.comboBox_opcao.setObjectName(u"comboBox_opcao")
+        self.comboBox_opcao.setMinimumSize(QSize(0, 25))
+        self.comboBox_opcao.setMaximumSize(QSize(300, 16777215))
 
-        self.gridLayout_2.addWidget(self.label_id, 0, 0, 1, 1)
+        self.gridLayout_2.addWidget(self.comboBox_opcao, 7, 0, 1, 2)
+
+        self.comboBox_tipo = QComboBox(self.page_cadastro)
+        self.comboBox_tipo.addItem("")
+        self.comboBox_tipo.addItem("")
+        self.comboBox_tipo.addItem("")
+        self.comboBox_tipo.addItem("")
+        self.comboBox_tipo.setObjectName(u"comboBox_tipo")
+        self.comboBox_tipo.setMinimumSize(QSize(200, 25))
+        self.comboBox_tipo.setMaximumSize(QSize(300, 16777215))
+
+        self.gridLayout_2.addWidget(self.comboBox_tipo, 4, 0, 1, 2)
+
+        self.comboBox_caracteristica = QComboBox(self.page_cadastro)
+        self.comboBox_caracteristica.addItem("")
+        self.comboBox_caracteristica.addItem("")
+        self.comboBox_caracteristica.addItem("")
+        self.comboBox_caracteristica.addItem("")
+        self.comboBox_caracteristica.addItem("")
+        self.comboBox_caracteristica.setObjectName(u"comboBox_caracteristica")
+        self.comboBox_caracteristica.setMinimumSize(QSize(0, 25))
+        self.comboBox_caracteristica.setMaximumSize(QSize(300, 16777215))
+
+        self.gridLayout_2.addWidget(self.comboBox_caracteristica, 6, 0, 1, 2)
+
+        self.comboBox_status = QComboBox(self.page_cadastro)
+        self.comboBox_status.addItem("")
+        self.comboBox_status.addItem("")
+        self.comboBox_status.addItem("")
+        self.comboBox_status.addItem("")
+        self.comboBox_status.addItem("")
+        self.comboBox_status.setObjectName(u"comboBox_status")
+        self.comboBox_status.setMinimumSize(QSize(0, 25))
+        self.comboBox_status.setMaximumSize(QSize(300, 16777215))
+
+        self.gridLayout_2.addWidget(self.comboBox_status, 5, 0, 1, 2)
+
+        self.lineEdit_celular = QLineEdit(self.page_cadastro)
+        self.lineEdit_celular.setObjectName(u"lineEdit_celular")
+        self.lineEdit_celular.setMinimumSize(QSize(0, 25))
+        self.lineEdit_celular.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout_2.addWidget(self.lineEdit_celular, 3, 4, 1, 3)
+
+        self.lineEdit_email = QLineEdit(self.page_cadastro)
+        self.lineEdit_email.setObjectName(u"lineEdit_email")
+        self.lineEdit_email.setMinimumSize(QSize(0, 25))
+        self.lineEdit_email.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout_2.addWidget(self.lineEdit_email, 3, 7, 1, 3)
+
+        self.lineEdit_complemento = QLineEdit(self.page_cadastro)
+        self.lineEdit_complemento.setObjectName(u"lineEdit_complemento")
+        self.lineEdit_complemento.setMinimumSize(QSize(0, 25))
+        self.lineEdit_complemento.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout_2.addWidget(self.lineEdit_complemento, 1, 8, 1, 2)
+
+        self.lineEdit_municipio = QLineEdit(self.page_cadastro)
+        self.lineEdit_municipio.setObjectName(u"lineEdit_municipio")
+        self.lineEdit_municipio.setMinimumSize(QSize(300, 25))
+        self.lineEdit_municipio.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout_2.addWidget(self.lineEdit_municipio, 2, 5, 1, 4)
+
+        self.lineEdit_logradouro = QLineEdit(self.page_cadastro)
+        self.lineEdit_logradouro.setObjectName(u"lineEdit_logradouro")
+        self.lineEdit_logradouro.setMinimumSize(QSize(0, 25))
+        self.lineEdit_logradouro.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout_2.addWidget(self.lineEdit_logradouro, 1, 0, 1, 6)
+
+        self.lineEdit_bairro = QLineEdit(self.page_cadastro)
+        self.lineEdit_bairro.setObjectName(u"lineEdit_bairro")
+        self.lineEdit_bairro.setMinimumSize(QSize(0, 25))
+        self.lineEdit_bairro.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout_2.addWidget(self.lineEdit_bairro, 2, 0, 1, 5)
+
+        self.lineEdit_cpf_cnpj = QLineEdit(self.page_cadastro)
+        self.lineEdit_cpf_cnpj.setObjectName(u"lineEdit_cpf_cnpj")
+        self.lineEdit_cpf_cnpj.setMinimumSize(QSize(200, 25))
+        self.lineEdit_cpf_cnpj.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout_2.addWidget(self.lineEdit_cpf_cnpj, 0, 3, 1, 3)
+
+        self.lineEdit_nome = QLineEdit(self.page_cadastro)
+        self.lineEdit_nome.setObjectName(u"lineEdit_nome")
+        sizePolicy.setHeightForWidth(self.lineEdit_nome.sizePolicy().hasHeightForWidth())
+        self.lineEdit_nome.setSizePolicy(sizePolicy)
+        self.lineEdit_nome.setMinimumSize(QSize(0, 25))
+        self.lineEdit_nome.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout_2.addWidget(self.lineEdit_nome, 0, 6, 1, 4)
+
+        self.lineEdit_numero = QLineEdit(self.page_cadastro)
+        self.lineEdit_numero.setObjectName(u"lineEdit_numero")
+        self.lineEdit_numero.setMinimumSize(QSize(0, 25))
+        self.lineEdit_numero.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout_2.addWidget(self.lineEdit_numero, 1, 6, 1, 2)
+
+        self.comboBox_persona = QComboBox(self.page_cadastro)
+        self.comboBox_persona.addItem("")
+        self.comboBox_persona.addItem("")
+        self.comboBox_persona.setObjectName(u"comboBox_persona")
+        self.comboBox_persona.setMinimumSize(QSize(140, 25))
+
+        self.gridLayout_2.addWidget(self.comboBox_persona, 0, 1, 1, 2)
+
+        self.lineEdit_uf = QLineEdit(self.page_cadastro)
+        self.lineEdit_uf.setObjectName(u"lineEdit_uf")
+        self.lineEdit_uf.setMinimumSize(QSize(0, 25))
+        self.lineEdit_uf.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout_2.addWidget(self.lineEdit_uf, 2, 9, 1, 1)
+
+        self.lineEdit_telefone = QLineEdit(self.page_cadastro)
+        self.lineEdit_telefone.setObjectName(u"lineEdit_telefone")
+        self.lineEdit_telefone.setMinimumSize(QSize(197, 25))
+        self.lineEdit_telefone.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout_2.addWidget(self.lineEdit_telefone, 3, 2, 1, 2)
+
+        self.lineEdit_cep = QLineEdit(self.page_cadastro)
+        self.lineEdit_cep.setObjectName(u"lineEdit_cep")
+        self.lineEdit_cep.setMinimumSize(QSize(0, 25))
+        self.lineEdit_cep.setMaximumSize(QSize(300, 16777215))
+        self.lineEdit_cep.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout_2.addWidget(self.lineEdit_cep, 3, 0, 1, 2)
+
+        self.lineEdit_descricao = QLineEdit(self.page_cadastro)
+        self.lineEdit_descricao.setObjectName(u"lineEdit_descricao")
+        sizePolicy.setHeightForWidth(self.lineEdit_descricao.sizePolicy().hasHeightForWidth())
+        self.lineEdit_descricao.setSizePolicy(sizePolicy)
+        self.lineEdit_descricao.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
+
+        self.gridLayout_2.addWidget(self.lineEdit_descricao, 4, 2, 5, 8)
 
         self.tabWidget.addTab(self.page_cadastro, "")
         self.page_consultar = QWidget()
@@ -739,46 +741,18 @@ class Ui_MainWindow(object):
         self.frame_title.setText(QCoreApplication.translate("MainWindow", u"ImovPy - Cadastro de im\u00f3veis", None))
         self.label_image.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><br/></p></body></html>", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.page_home), QCoreApplication.translate("MainWindow", u"Home", None))
-        self.lineEdit_email.setText("")
-        self.lineEdit_email.setPlaceholderText(QCoreApplication.translate("MainWindow", u"E-MAIL", None))
+        self.lineEdit_id.setPlaceholderText(QCoreApplication.translate("MainWindow", u"ID", None))
+        self.lineEdit_valor.setText("")
+        self.lineEdit_valor.setPlaceholderText(QCoreApplication.translate("MainWindow", u"VALOR", None))
+        self.btn_cadastrar.setText(QCoreApplication.translate("MainWindow", u"Cadastrar", None))
+        self.btn_limpar.setText(QCoreApplication.translate("MainWindow", u"Limpar", None))
+        self.comboBox_opcao.setItemText(0, QCoreApplication.translate("MainWindow", u"Vis\u00edvel", None))
+        self.comboBox_opcao.setItemText(1, QCoreApplication.translate("MainWindow", u"Oculto", None))
+
         self.comboBox_tipo.setItemText(0, QCoreApplication.translate("MainWindow", u"Selecione", None))
         self.comboBox_tipo.setItemText(1, QCoreApplication.translate("MainWindow", u"Venda", None))
         self.comboBox_tipo.setItemText(2, QCoreApplication.translate("MainWindow", u"Loca\u00e7\u00e3o", None))
         self.comboBox_tipo.setItemText(3, QCoreApplication.translate("MainWindow", u"Venda/Loca\u00e7\u00e3o", None))
-
-        self.lineEdit_numero.setText("")
-        self.lineEdit_numero.setPlaceholderText(QCoreApplication.translate("MainWindow", u"N\u00daMERO", None))
-        self.lineEdit_cep.setText("")
-        self.lineEdit_cep.setPlaceholderText(QCoreApplication.translate("MainWindow", u"CEP", None))
-        self.lineEdit_municipio.setText("")
-        self.lineEdit_municipio.setPlaceholderText(QCoreApplication.translate("MainWindow", u"MUNIC\u00cdPIO", None))
-        self.lineEdit_celular.setText("")
-        self.lineEdit_celular.setPlaceholderText(QCoreApplication.translate("MainWindow", u"CELULAR", None))
-        self.lineEdit_bairro.setText("")
-        self.lineEdit_bairro.setPlaceholderText(QCoreApplication.translate("MainWindow", u"BAIRRO", None))
-        self.lineEdit_cpf_cnpj.setText("")
-        self.lineEdit_cpf_cnpj.setPlaceholderText(QCoreApplication.translate("MainWindow", u"CPF/CNPJ", None))
-        self.lineEdit_logradouro.setText("")
-        self.lineEdit_logradouro.setPlaceholderText(QCoreApplication.translate("MainWindow", u"LOGRADOURO", None))
-        self.lineEdit_telefone.setText("")
-        self.lineEdit_telefone.setPlaceholderText(QCoreApplication.translate("MainWindow", u"TELEFONE", None))
-        self.comboBox_persona.setItemText(0, QCoreApplication.translate("MainWindow", u"Jur\u00eddica", None))
-        self.comboBox_persona.setItemText(1, QCoreApplication.translate("MainWindow", u"F\u00edsica", None))
-
-        self.lineEdit_uf.setText("")
-        self.lineEdit_uf.setPlaceholderText(QCoreApplication.translate("MainWindow", u"UF", None))
-        self.textEdit_descricao.setPlaceholderText(QCoreApplication.translate("MainWindow", u"DESCRI\u00c7\u00c3O", None))
-        self.lineEdit_nome.setText("")
-        self.lineEdit_nome.setPlaceholderText(QCoreApplication.translate("MainWindow", u"NOME/RAZ\u00c3O SOCIAL", None))
-        self.lineEdit_complemento.setText("")
-        self.lineEdit_complemento.setPlaceholderText(QCoreApplication.translate("MainWindow", u"COMPLEMENTO", None))
-        self.lineEdit_valor.setText("")
-        self.lineEdit_valor.setPlaceholderText(QCoreApplication.translate("MainWindow", u"VALOR", None))
-        self.comboBox_status.setItemText(0, QCoreApplication.translate("MainWindow", u"Selecione", None))
-        self.comboBox_status.setItemText(1, QCoreApplication.translate("MainWindow", u"Dispon\u00edvel", None))
-        self.comboBox_status.setItemText(2, QCoreApplication.translate("MainWindow", u"Locado", None))
-        self.comboBox_status.setItemText(3, QCoreApplication.translate("MainWindow", u"Vendido", None))
-        self.comboBox_status.setItemText(4, QCoreApplication.translate("MainWindow", u"\u00c0 Liberar", None))
 
         self.comboBox_caracteristica.setItemText(0, QCoreApplication.translate("MainWindow", u"Selecione", None))
         self.comboBox_caracteristica.setItemText(1, QCoreApplication.translate("MainWindow", u"Apartamento", None))
@@ -786,12 +760,40 @@ class Ui_MainWindow(object):
         self.comboBox_caracteristica.setItemText(3, QCoreApplication.translate("MainWindow", u"Terreno", None))
         self.comboBox_caracteristica.setItemText(4, QCoreApplication.translate("MainWindow", u"Rural", None))
 
-        self.comboBox_opcao.setItemText(0, QCoreApplication.translate("MainWindow", u"Vis\u00edvel", None))
-        self.comboBox_opcao.setItemText(1, QCoreApplication.translate("MainWindow", u"Oculto", None))
+        self.comboBox_status.setItemText(0, QCoreApplication.translate("MainWindow", u"Selecione", None))
+        self.comboBox_status.setItemText(1, QCoreApplication.translate("MainWindow", u"Dispon\u00edvel", None))
+        self.comboBox_status.setItemText(2, QCoreApplication.translate("MainWindow", u"Locado", None))
+        self.comboBox_status.setItemText(3, QCoreApplication.translate("MainWindow", u"Vendido", None))
+        self.comboBox_status.setItemText(4, QCoreApplication.translate("MainWindow", u"\u00c0 Liberar", None))
 
-        self.btn_cadastrar.setText(QCoreApplication.translate("MainWindow", u"Cadastrar", None))
-        self.btn_limpar.setText(QCoreApplication.translate("MainWindow", u"Limpar", None))
-        self.label_id.setText("")
+        self.lineEdit_celular.setText("")
+        self.lineEdit_celular.setPlaceholderText(QCoreApplication.translate("MainWindow", u"CELULAR", None))
+        self.lineEdit_email.setText("")
+        self.lineEdit_email.setPlaceholderText(QCoreApplication.translate("MainWindow", u"E-MAIL", None))
+        self.lineEdit_complemento.setText("")
+        self.lineEdit_complemento.setPlaceholderText(QCoreApplication.translate("MainWindow", u"COMPLEMENTO", None))
+        self.lineEdit_municipio.setText("")
+        self.lineEdit_municipio.setPlaceholderText(QCoreApplication.translate("MainWindow", u"MUNIC\u00cdPIO", None))
+        self.lineEdit_logradouro.setText("")
+        self.lineEdit_logradouro.setPlaceholderText(QCoreApplication.translate("MainWindow", u"LOGRADOURO", None))
+        self.lineEdit_bairro.setText("")
+        self.lineEdit_bairro.setPlaceholderText(QCoreApplication.translate("MainWindow", u"BAIRRO", None))
+        self.lineEdit_cpf_cnpj.setText("")
+        self.lineEdit_cpf_cnpj.setPlaceholderText(QCoreApplication.translate("MainWindow", u"CPF/CNPJ", None))
+        self.lineEdit_nome.setText("")
+        self.lineEdit_nome.setPlaceholderText(QCoreApplication.translate("MainWindow", u"NOME/RAZ\u00c3O SOCIAL", None))
+        self.lineEdit_numero.setText("")
+        self.lineEdit_numero.setPlaceholderText(QCoreApplication.translate("MainWindow", u"N\u00daMERO", None))
+        self.comboBox_persona.setItemText(0, QCoreApplication.translate("MainWindow", u"Jur\u00eddica", None))
+        self.comboBox_persona.setItemText(1, QCoreApplication.translate("MainWindow", u"F\u00edsica", None))
+
+        self.lineEdit_uf.setText("")
+        self.lineEdit_uf.setPlaceholderText(QCoreApplication.translate("MainWindow", u"UF", None))
+        self.lineEdit_telefone.setText("")
+        self.lineEdit_telefone.setPlaceholderText(QCoreApplication.translate("MainWindow", u"TELEFONE", None))
+        self.lineEdit_cep.setText("")
+        self.lineEdit_cep.setPlaceholderText(QCoreApplication.translate("MainWindow", u"CEP", None))
+        self.lineEdit_descricao.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Descri\u00e7\u00e3o", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.page_cadastro), QCoreApplication.translate("MainWindow", u"Cadastro", None))
         ___qtablewidgetitem = self.table_immobile.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"ID", None));

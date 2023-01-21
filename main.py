@@ -76,6 +76,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         db.connect()
         
         fullDataSet = (
+            self.lineEdit_id.text(),
             self.comboBox_persona.currentText(),
             self.lineEdit_cpf_cnpj.text(),
             self.lineEdit_nome.text(),
@@ -94,7 +95,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.comboBox_caracteristica.currentText(),
             self.comboBox_opcao.currentText(),
             self.lineEdit_valor.text(),
-            self.textEdit_descricao.toPlainText(),
+            self.lineEdit_descricao.text(),
         )
         
         resp = db.register_immobile(fullDataSet)
@@ -109,7 +110,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             msg.exec()           
             db.disconnect()
             
-            self.label_id.clear()
+            self.lineEdit_id.clear()
             self.lineEdit_cpf_cnpj.clear(),
             self.lineEdit_nome.clear(),
             self.lineEdit_logradouro.clear(),
@@ -123,7 +124,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.lineEdit_celular.clear(),
             self.lineEdit_email.clear(),
             self.lineEdit_valor.clear(),
-            self.textEdit_descricao.clear() 
+            self.lineEdit_descricao.clear() 
             return         
         else:
             msg = QMessageBox()

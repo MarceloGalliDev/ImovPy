@@ -559,306 +559,19 @@ QTextEdit{
                  <string>Cadastro</string>
                 </attribute>
                 <layout class="QGridLayout" name="gridLayout_2">
-                 <item row="3" column="7" colspan="3">
-                  <widget class="QLineEdit" name="lineEdit_email">
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>25</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string/>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                   <property name="placeholderText">
-                    <string>E-MAIL</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="4" column="0" colspan="2">
-                  <widget class="QComboBox" name="comboBox_tipo">
-                   <property name="minimumSize">
-                    <size>
-                     <width>200</width>
-                     <height>25</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>300</width>
-                     <height>16777215</height>
-                    </size>
-                   </property>
-                   <item>
-                    <property name="text">
-                     <string>Selecione</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Venda</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Locação</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Venda/Locação</string>
-                    </property>
-                   </item>
-                  </widget>
-                 </item>
-                 <item row="1" column="6" colspan="2">
-                  <widget class="QLineEdit" name="lineEdit_numero">
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>25</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string/>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                   <property name="placeholderText">
-                    <string>NÚMERO</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="3" column="0" colspan="2">
-                  <widget class="QLineEdit" name="lineEdit_cep">
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>25</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>300</width>
-                     <height>16777215</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string/>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                   <property name="placeholderText">
-                    <string>CEP</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="2" column="5" colspan="4">
-                  <widget class="QLineEdit" name="lineEdit_municipio">
-                   <property name="minimumSize">
-                    <size>
-                     <width>300</width>
-                     <height>25</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string/>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                   <property name="placeholderText">
-                    <string>MUNICÍPIO</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="3" column="4" colspan="3">
-                  <widget class="QLineEdit" name="lineEdit_celular">
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>25</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string/>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                   <property name="placeholderText">
-                    <string>CELULAR</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="2" column="0" colspan="5">
-                  <widget class="QLineEdit" name="lineEdit_bairro">
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>25</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string/>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                   <property name="placeholderText">
-                    <string>BAIRRO</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="3" colspan="3">
-                  <widget class="QLineEdit" name="lineEdit_cpf_cnpj">
-                   <property name="minimumSize">
-                    <size>
-                     <width>200</width>
-                     <height>25</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string/>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                   <property name="placeholderText">
-                    <string>CPF/CNPJ</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="1" column="0" colspan="6">
-                  <widget class="QLineEdit" name="lineEdit_logradouro">
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>25</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string/>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                   <property name="placeholderText">
-                    <string>LOGRADOURO</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="3" column="2" colspan="2">
-                  <widget class="QLineEdit" name="lineEdit_telefone">
-                   <property name="minimumSize">
-                    <size>
-                     <width>197</width>
-                     <height>25</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string/>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                   <property name="placeholderText">
-                    <string>TELEFONE</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="1" colspan="2">
-                  <widget class="QComboBox" name="comboBox_persona">
-                   <property name="minimumSize">
-                    <size>
-                     <width>140</width>
-                     <height>25</height>
-                    </size>
-                   </property>
-                   <item>
-                    <property name="text">
-                     <string>Jurídica</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Física</string>
-                    </property>
-                   </item>
-                  </widget>
-                 </item>
-                 <item row="2" column="9">
-                  <widget class="QLineEdit" name="lineEdit_uf">
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>25</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string/>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                   <property name="placeholderText">
-                    <string>UF</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="4" column="2" rowspan="5" colspan="8">
-                  <widget class="QTextEdit" name="textEdit_descricao">
-                   <property name="placeholderText">
-                    <string>DESCRIÇÃO</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="6" colspan="4">
-                  <widget class="QLineEdit" name="lineEdit_nome">
+                 <item row="0" column="0">
+                  <widget class="QLineEdit" name="lineEdit_id">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                      <horstretch>0</horstretch>
                      <verstretch>0</verstretch>
                     </sizepolicy>
                    </property>
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>25</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string/>
-                   </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
                    </property>
                    <property name="placeholderText">
-                    <string>NOME/RAZÃO SOCIAL</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="1" column="8" colspan="2">
-                  <widget class="QLineEdit" name="lineEdit_complemento">
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>25</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string/>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                   <property name="placeholderText">
-                    <string>COMPLEMENTO</string>
+                    <string>ID</string>
                    </property>
                   </widget>
                  </item>
@@ -885,114 +598,6 @@ QTextEdit{
                    <property name="placeholderText">
                     <string>VALOR</string>
                    </property>
-                  </widget>
-                 </item>
-                 <item row="5" column="0" colspan="2">
-                  <widget class="QComboBox" name="comboBox_status">
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>25</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>300</width>
-                     <height>16777215</height>
-                    </size>
-                   </property>
-                   <item>
-                    <property name="text">
-                     <string>Selecione</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Disponível</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Locado</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Vendido</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>À Liberar</string>
-                    </property>
-                   </item>
-                  </widget>
-                 </item>
-                 <item row="6" column="0" colspan="2">
-                  <widget class="QComboBox" name="comboBox_caracteristica">
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>25</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>300</width>
-                     <height>16777215</height>
-                    </size>
-                   </property>
-                   <item>
-                    <property name="text">
-                     <string>Selecione</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Apartamento</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Casa</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Terreno</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Rural</string>
-                    </property>
-                   </item>
-                  </widget>
-                 </item>
-                 <item row="7" column="0" colspan="2">
-                  <widget class="QComboBox" name="comboBox_opcao">
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>25</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>300</width>
-                     <height>16777215</height>
-                    </size>
-                   </property>
-                   <item>
-                    <property name="text">
-                     <string>Visível</string>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Oculto</string>
-                    </property>
-                   </item>
                   </widget>
                  </item>
                  <item row="9" column="0" colspan="10">
@@ -1132,16 +737,423 @@ QPushButton:hover {
                    </layout>
                   </widget>
                  </item>
-                 <item row="0" column="0">
-                  <widget class="QLabel" name="label_id">
-                   <property name="styleSheet">
-                    <string notr="true">QLabel {
-	background-color: #786324;
-	border-radius: 5px
-}</string>
+                 <item row="7" column="0" colspan="2">
+                  <widget class="QComboBox" name="comboBox_opcao">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>25</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>300</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>Visível</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Oculto</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item row="4" column="0" colspan="2">
+                  <widget class="QComboBox" name="comboBox_tipo">
+                   <property name="minimumSize">
+                    <size>
+                     <width>200</width>
+                     <height>25</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>300</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>Selecione</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Venda</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Locação</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Venda/Locação</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item row="6" column="0" colspan="2">
+                  <widget class="QComboBox" name="comboBox_caracteristica">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>25</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>300</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>Selecione</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Apartamento</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Casa</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Terreno</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Rural</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item row="5" column="0" colspan="2">
+                  <widget class="QComboBox" name="comboBox_status">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>25</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>300</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>Selecione</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Disponível</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Locado</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Vendido</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>À Liberar</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item row="3" column="4" colspan="3">
+                  <widget class="QLineEdit" name="lineEdit_celular">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>25</height>
+                    </size>
                    </property>
                    <property name="text">
                     <string/>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="placeholderText">
+                    <string>CELULAR</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="7" colspan="3">
+                  <widget class="QLineEdit" name="lineEdit_email">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>25</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="placeholderText">
+                    <string>E-MAIL</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="8" colspan="2">
+                  <widget class="QLineEdit" name="lineEdit_complemento">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>25</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="placeholderText">
+                    <string>COMPLEMENTO</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="5" colspan="4">
+                  <widget class="QLineEdit" name="lineEdit_municipio">
+                   <property name="minimumSize">
+                    <size>
+                     <width>300</width>
+                     <height>25</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="placeholderText">
+                    <string>MUNICÍPIO</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="0" colspan="6">
+                  <widget class="QLineEdit" name="lineEdit_logradouro">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>25</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="placeholderText">
+                    <string>LOGRADOURO</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="0" colspan="5">
+                  <widget class="QLineEdit" name="lineEdit_bairro">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>25</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="placeholderText">
+                    <string>BAIRRO</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="3" colspan="3">
+                  <widget class="QLineEdit" name="lineEdit_cpf_cnpj">
+                   <property name="minimumSize">
+                    <size>
+                     <width>200</width>
+                     <height>25</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="placeholderText">
+                    <string>CPF/CNPJ</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="6" colspan="4">
+                  <widget class="QLineEdit" name="lineEdit_nome">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>25</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="placeholderText">
+                    <string>NOME/RAZÃO SOCIAL</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="6" colspan="2">
+                  <widget class="QLineEdit" name="lineEdit_numero">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>25</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="placeholderText">
+                    <string>NÚMERO</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1" colspan="2">
+                  <widget class="QComboBox" name="comboBox_persona">
+                   <property name="minimumSize">
+                    <size>
+                     <width>140</width>
+                     <height>25</height>
+                    </size>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>Jurídica</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>Física</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                 <item row="2" column="9">
+                  <widget class="QLineEdit" name="lineEdit_uf">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>25</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="placeholderText">
+                    <string>UF</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="2" colspan="2">
+                  <widget class="QLineEdit" name="lineEdit_telefone">
+                   <property name="minimumSize">
+                    <size>
+                     <width>197</width>
+                     <height>25</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="placeholderText">
+                    <string>TELEFONE</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="0" colspan="2">
+                  <widget class="QLineEdit" name="lineEdit_cep">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>25</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>300</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="placeholderText">
+                    <string>CEP</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="2" rowspan="5" colspan="8">
+                  <widget class="QLineEdit" name="lineEdit_descricao">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+                   </property>
+                   <property name="placeholderText">
+                    <string>Descrição</string>
                    </property>
                   </widget>
                  </item>

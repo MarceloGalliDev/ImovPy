@@ -36,14 +36,14 @@ class Database:
                 CARACTERISTICA TEXT,
                 VISIBILIDADE TEXT,
                 VALOR TEXT,
-                DESCRICAO TEXT           
+                DESCRICAO TEXT       
             )          
         """)
     
     def register_immobile(self, fullDataSet):
-        input_table = ('PERSONA', 'CNPJ_CPF', 'NOME', 'ENDERECO', 'NUMERO', 'COMPLEMENTO', 'BAIRRO', 'CIDADE', 'UF', 'CEP', 'TELEFONE', 'CELULAR', 'EMAIL', 'TIPO', 'STATUS', 'CARACTERISTICAS', 'VISIBILIDADE', 'VALOR', 'DESCRICAO')
+        input_table = ('ID','PERSONA', 'CNPJ_CPF', 'NOME', 'ENDERECO', 'NUMERO', 'COMPLEMENTO', 'BAIRRO', 'CIDADE', 'UF', 'CEP', 'TELEFONE', 'CELULAR', 'EMAIL', 'TIPO', 'STATUS', 'CARACTERISTICA', 'VISIBILIDADE', 'VALOR', 'DESCRICAO')
         
-        qtde = ("?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?")
+        qtde = ("?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?")
         cursor = self.connection.cursor()
         
         try:
