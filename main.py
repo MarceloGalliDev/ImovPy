@@ -177,19 +177,19 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     
     ### UPDATE ##################
     def update_immobile(self):
-        data = []
-        update_data = []
-        
+        dados = []
+        update_dados = []
+
         for row in range(self.table_immobile.rowCount()):
-            for column in range(self.table_immobile.colorCount()):
-                data.append(self.table_immobile.item(row, column).text())
-            update_data.append(data)
-            data = []
+            for column in range(self.table_immobile.columnCount()):
+                dados.append(self.table_immobile.item(row, column).text())
+            update_dados.append(dados)
+            dados = []
         
         db = Database()
         db.connect()
         
-        for emp in update_data:
+        for emp in update_dados:
             db.update_immobile(tuple(emp))
         db.disconnect()
         
