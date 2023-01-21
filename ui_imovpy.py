@@ -722,7 +722,7 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
 
         self.menu_aside_content.setCurrentIndex(0)
-        self.tabWidget.setCurrentIndex(1)
+        self.tabWidget.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)

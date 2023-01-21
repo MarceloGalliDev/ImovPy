@@ -23,14 +23,16 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.btn_limpar.clicked.connect(self.clear_fields)
         #########################
         
-        ### SYSTEM PAGES ###
+        ### SYSTEM PAGES ########
         self.btn_home.clicked.connect(lambda: self.tabWidget_content.setCurrentWidget(self.page_home))
         self.btn_cadastro.clicked.connect(lambda: self.tabWidget_content.setCurrentWidget(self.page_cadastro))
         self.btn_consultar.clicked.connect(lambda: self.tabWidget_content.setCurrentWidget(self.page_consultar))
         self.btn_contato.clicked.connect(lambda: self.tabWidget_content.setCurrentWidget(self.page_contato))
-        ##################### 
+        #########################
+        
+        self.immobile_search()
     
-    ### MENU ANIMATION ###
+    ### MENU ANIMATION ##########
     def toggleMenu(self):
         width = self.frame_aside.width()
         if width == 0:
@@ -38,15 +40,15 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         else:
             newWidth = 0
         
-        self.animation = QPropertyAnimation(self.frame_aside, b"maximumWidth")
+        self.animation = QPropertyAnimation(self.frame_aside, b"minimumWidth")
         self.animation.setDuration(500)
         self.animation.setStartValue(width)
         self.animation.setEndValue(newWidth)
         self.animation.setEasingCurve(QEasingCurve.InOutQuart)
         self.animation.start()
-    ######################
+    #############################
     
-    ### API CONSULT ###
+    ### API CONSULT #############
     def api_consult(self):
         if self.comboBox_persona.currentText() == "Jurídica":
             fields = cnpj_consult(self.lineEdit_cpf_cnpj.text())
@@ -68,9 +70,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             msg.setWindowTitle("Erro")
             msg.setText("Erro ao cadastrar, selecione uma opção de persona!")
             msg.exec()  
-    ###################
+    #############################
     
-    ### REGISTER ###
+    ### REGISTER ################
     def register_fields(self):
         db = Database()
         db.connect()
@@ -134,9 +136,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             msg.exec()
             db.disconnect()
             return
-    ###############
+    #############################
 
-    ### CLEAR FIELDS ###
+    ### CLEAR FIELDS ############
     def clear_fields(self):
             self.lineEdit_cpf_cnpj.clear(),
             self.lineEdit_nome.clear(),
@@ -152,9 +154,9 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             self.lineEdit_email.clear(),
             self.lineEdit_valor.clear(),
             self.textEdit_descricao.clear() 
-    ####################
+    #############################
     
-    ### SEARCH ###
+    ### SEARCH ##################
     def immobile_search(self):
         db = Database()
         db.connect()
@@ -168,9 +170,65 @@ class MainWindow(QMainWindow, Ui_MainWindow):
                 self.table_immobile.setItem(row, column, QTableWidgetItem(str(data)))
         
         db.disconnect()
-    ############## 
+    #############################
     
-### CONNECTION ###    
+    ### UPDATE ##################
+    def update_immobile(self):
+        data = []
+        update_data = []
+        
+        for row in range(self.table_immobile.rowCount()):
+            for column in range(self.table_immobile.colorCount()):
+                data.append(self.table_immobile.item(row, column).text())
+            update_data.append(data)
+            data = []
+        
+        db = Database()
+        db.connect()
+        
+        for emp in update_data:
+            db.update_immobile(tuple(emp))
+        db.disconnect()
+        
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Information)
+        msg.setWindowTitle("Atualização de dados")
+        msg.setText("Atualização realizada com sucesso!")
+        msg.exec()
+        
+        self.table_immobile.reset()
+        self.immobile_search()
+    #############################
+    
+    ### DELETE ROW ##############
+    def delete_row(self):
+        db = Database()
+        db.connect()
+        
+        msg = QMessageBox()
+        msg.setWindowTitle("Excluir")
+        msg.setText("Este registro será excluído!")
+        msg.setInformativeText("Você tem certeza que deseja excluir esse registro?")
+        msg.setStandardButtons(QMessageBox.No | QMessageBox.Yes)
+        resp = msg.exec()
+        
+        if resp == QMessageBox.Yes:
+            cnpj = self.tb_company.selectionModel().currentIndex().siblingAtColumn(0).data()
+            result = db.delete_immobile(id)
+            self.immobile_search()
+            
+            msg = QMessageBox()
+            msg.setIcon(QMessageBox.Information)
+            msg.setWindowTitle("Excluir")
+            msg.setText(result)
+            msg.exec()
+            
+            db.close_connection()
+        
+        db.close_connection() 
+    #############################
+    
+### CONNECTION ##################    
 if __name__ == "__main__":
     db = Database()
     db.connect()
@@ -181,4 +239,4 @@ if __name__ == "__main__":
     window = MainWindow()
     window.show()
     app.exec()
-###################
+#################################
